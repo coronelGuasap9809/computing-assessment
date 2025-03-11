@@ -38,7 +38,7 @@ https://coronelguasap9809.github.io/computing-assessment/
 If my project doesn't work or run properly, then I don't know what to tell you except "bug".
 
 ## Contributing
-This repository s mainly so I can run it from GitHub pages so I won't be adding public pull requests. Feel free to do what you want with it by cloning.
+This repository is mainly so I can run it from GitHub pages so I won't be adding public pull requests. Feel free to do what you want with it by cloning.
 
 ## License
 This project is licensed under the MIT License.
