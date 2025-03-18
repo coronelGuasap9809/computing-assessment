@@ -1,0 +1,67 @@
+.titleBar{
+  display: flex;
+  padding: 5px;
+  border-radius: 0px 0px 10px 10px;
+  justify-content: space-between;
+}
+
+.navigatorBtn{
+  padding: 4px 7px;
+}
+
+.aspectsBtn{
+  width: 800px;
+  padding: 4px;
+  margin: 10px auto 5px;
+  display: block;
+}
+
+.disabledBtn{
+  background-color: #485459; 
+  border-color: #374348
+}
+
+.btnContainer{
+  margin: 0;
+  padding: 5px;
+}
+
+.content{
+  width: 1000px;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+}
+
+div{
+  background-color: #e6e6e6;
+}
+
+p{
+  margin: 4px 10px;
+}
+h1{
+  font-size: 26px;
+  margin: 4px 10px;
+}
+
+h2{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 4px 10px;
+}
+
+a{
+  color: #45ad68;
+}
+
+button{
+  border-radius: 7px;
+  border-color: #40B767;
+  background-color: #50C878;
+  color: white;
+}
