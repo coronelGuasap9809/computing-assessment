@@ -4,7 +4,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <p id = "aspectsBtn"></p>
 </head>
 <body>
   <div class = "titleBar">
@@ -14,6 +13,94 @@
       <button disabled id = "aspectsBtnNav" class = "navigatorBtn disabledBtn">Aspects</button>
     </div>
   </div> 
+  <div class = "content">
+    <div class = "aspectHeader">
+      <h2>Passwords</h2>
+      <div class = "iconContainer">
+        <img class = "icon" src = "lock.png">
+        <img class = "icon" src = "password.png">
+      </div>
+    </div>
+    <div style = "display: flex; align-items: center; justify-content: space-between;">
+      <div style = "width:850px">
+        <p>Setting a strong password is always the first step towards cybersecurity. A good password contains both <strong>uppercase</strong> and <strong>lowercase</strong> letters, <strong>numbers</strong> and <strong>special characters</strong>. If this is too hard for you to remember, you could also create a <strong>"passphrase"</strong> which is 3 random words stringed together. It is good practice to <strong>not</strong> repeat passwords across accounts: if one is breached, it is possible <strong>all</strong> the other accounts which share it could be in jeopardy. Finally, you should not make your password something like a real phrase or a password that is bad for <em>obvious</em> reasons (i.e. 'password', '12345' etc.).<br><br><br><br>Click on the <strong>GO</strong> button to view the statistics page for <strong>passwords</strong>.</p>
+      </div>
+      <button class = "GO"><h1>GO</h1></button>
+    </div>
+  </div>
+  <div class = "content">
+    <div class = "aspectHeader">
+      <h2>Preventing Unwanted Connections</h2>
+      <div class = "iconContainer">
+        <img class = "icon" src = "shield.png">
+        <img class = "icon" src = "spy.png">
+      </div>
+    </div>
+    <div style = "display: flex; align-items: center; justify-content: space-between;">
+      <div style = "width:850px">
+        <p>A factor that defines cybersecurity strongly is privacy. However, even if you maintain privacy on the internet, there may still be threat actors violating your privacy without your knowledge. They achieve this through many methods wich allow them to connect themselves to your systems. These include:</p>
+        <ul>
+          <li><strong>Evil twins</strong> - malicious wifi networks impersonating legitimate ones</li>
+          <li><strong>Malware</strong> - malicious software which compromises your computer and can be transmitted through suspicious downloads, <a href = "phising.html" >phishing</a> etc.</li>
+          <li><strong>Hacking</strong> - malicious programmers with a strong knowledge of systems which connect to and breach systems.</li>
+        </ul>
+        <p>Click on the <strong>GO</strong> button to view the statistics page for <strong>preventing unwanted connections</strong>.</p>
+      </div>
+      <button class = "GO"><h1>GO</h1></button>
+    </div>
+  </div>
+  <div class = "content">
+    <div class = "aspectHeader">
+      <h2>Phishing</h2>
+      <div class = "iconContainer">
+        <img class = "icon" src = "phishing.png">
+        <img class = "icon" src = "mail.png">
+      </div>
+    </div>
+    <div style = "display: flex; align-items: center; justify-content: space-between;">
+      <div style = "width:850px">
+        <p>Phishing is a type of cyber threat where a threat actor <strong>impersonates</strong> a legitimate person or organisation via <strong>email</strong> and either demands money in some way or provides a link to a malicious website where your data may get stolen or you may get malware. <br>Commonly, phishing attacks impersonate <strong>banks or taxation agencies</strong>, saying your bills are overdue or <strong>online retail</strong> companies giving you an unsolicited refund. <strong>Smishing</strong> is an increasingly common version of phishing in which the threat actor communicates via <strong>SMS</strong> and <strong>spearphishing</strong> is <strong>targeted</strong> phishing using information such as your name and some personal details that make the attack more convincing.<br><br><br>Click on the <strong>GO</strong> button to view the statistics page for <strong>phishing</strong>.</p>
+      </div>
+      <button class = "GO"><h1>GO</h1></button>
+    </div>
+  </div>
+  <div class = "content">
+    <div class = "aspectHeader">
+      <h2>Backups</h2>
+      <div class = "iconContainer">
+        <img class = "icon" src = "disk.png">
+        <img class = "icon" src = "save.png">
+      </div>
+    </div>
+    <div style = "display: flex; align-items: center; justify-content: space-between;">
+      <div style = "width:850px">
+        <p>Backups are a way to ensure that even if all else fails and your computer or data is breached, corrupted or stolen, you have a secure way to recover your important information.<br><br>Click on the <strong>GO</strong> button to view the statistics page for <strong>backups</strong>.</p>
+      </div>
+      <button class = "GO"><h1>GO</h1></button>
+    </div>
+  </div>
+  <div class = "content">
+    <div class = "aspectHeader">
+      <h2>Staying Safe on Social Media</h2>
+      <div class = "iconContainer">
+        <img class = "icon" src = "message.png">
+        <img class = "icon" src = "thumbs.png">
+      </div>
+    </div>
+    <div style = "display: flex; align-items: center; justify-content: space-between;">
+      <div style = "width:850px">
+        <p><br><br><br><br>Click on the <strong>GO</strong> button to view the statistics page for <strong>staying safe on social media</strong>.</p>
+      </div>
+      <button class = "GO"><h1>GO</h1></button>
+    </div>
+  </div>
   <script src = "script.js">
+  </script>
+  <script>
+    function gotoHome(){
+      location.href = "index.html";
+    }
+
+    homeBtn.onclick = gotoHome;
   </script>
 </body>
