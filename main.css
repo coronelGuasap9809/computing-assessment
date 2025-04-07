@@ -37,6 +37,14 @@
   border-radius: 10px;
   margin: 20px auto;
 }
+.contentGrid{
+  width: 1000px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: grid;
+  gap: 15px;
+}
 
 .divHeader{
   display: flex;
@@ -44,7 +52,9 @@
   border-radius:10px;
   justify-content: space-between;
   margin-top: 0;
-  background-color: #ffffff
+  background-color: #ffffff;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .iconContainer{
@@ -67,7 +77,20 @@
   height: 95px;
   justify-content: center;
   align-items: center;
-  margin-right: 30px
+  margin-right: 30px;
+}
+
+.statisticDiv{
+  display: flex;
+  padding: 5px;
+  border-radius:10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.centered{
+  text-align: center;
 }
 
 body{
@@ -93,6 +116,11 @@ h2{
   margin: 4px 10px;
 }
 
+h3{
+  font-size: 3em;
+  margin: 8px;
+}
+
 a{
   color: #45ad68;
 }
@@ -103,4 +131,9 @@ button{
   background-color: #50C878;
   color: white;
   font-size: 20px;
+}
+
+ol{
+  font-size: 1.5em;
+  margin: 8px;
 }
