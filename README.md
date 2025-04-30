@@ -19,17 +19,8 @@ This project is a part of an assessment. It is mainly assessing my skills in HTM
 - Interactive elements.
 - Gonk
 
-## Installation
-To get started with this project, simply clone the repository and open the `index.html` file in your web browser.
-
-```sh
-git clone https://github.com/coronelGuasap9809/computing-assessment.git
-cd computing-assessment.git
-```
-
 ## Usage
-Open the `index.html` file in your web browser to see the project in action.
-I have also created a GitHub Pages URL to test it. 
+Open the GitHub Pages URL to view site. 
 
 ```sh
 https://coronelguasap9809.github.io/computing-assessment/
