@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href = "main.css" rel = "stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <title>Securi-smart | Unwanted Connections</title>
+</head>
+<body>
+  <div class = "titleBar">
+    <h1>Securi-smart Aspect: <em>Protecting from Unwanted Connections</em></h1>
+    <div class = "btnContainer">
+      <button id = "homeBtn" class = "navigatorBtn">Home</button>
+      <button id = "aspectsBtnNav" class = "navigatorBtn">Aspects</button>
+    </div>
+  </div> 
+  <div class = "contentGrid">
+    <div class = "divHeader">
+      <h3>The Stats</h3>
+    </div>
+    <div class = "statisticDiv">
+      <h3>92%</h3>
+      <h2 class = "centered">The percentage of Australians that use the internet as of 2024</h2>
+    </div>
+    <img class = "gridImg" src = "./images/internetUser.jpeg" alt ="A man using his phone in a cafe"><!--./images/internetUser.jpeg-->
+    <div class = "statisticDiv" style = "flex-direction: column;">
+      <div class = "captivePortal">
+        <form onsubmit = "captiveSubmit();">
+          <h5>Welcome to Public_Free_WiFi. Please log in to access.</h5>
+          <label for = "email">Email</label><br>
+          <input type = "email" name = "email" placeholder = "example@gmail.com"><br>
+          <label for = "pass">Password</label><br>
+          <input type = "password" name = "pass" placeholder = "Your password" id = "pass"><br><br>
+          <input type = "checkbox" name = "showPass" onclick = "showPassword()">
+          <label for = "showpass">Show Password</label><br><br>
+          <br>
+          <br>
+          <input type = "submit">
+          <input type = "reset">
+        </form> 
+      </div>
+      <br>
+      <h2 class = "centered" id = "formResponse">An example Evil Twin captive portal. (Interactive)</h2>
+    </div>
+    <div class = "statisticDiv">
+      <h3>6.06 BILLION</h3>
+      <h2>The amount of malware attacks globally in just 2023</h2>
+    </div>
+    <div class = "statisticDiv">
+      <h3>40%</h3>
+      <h2 class = "centered">The percentage of study respondents that had their data compromised or hacked while using a public wifi network.</h2>
+    </div>
+    <img class = "gridImg" src = "./images/evilTwin.jpeg" alt ="a group of businesmen looking anxiously at a computer"><!--./images/evilTwin.jpeg-->
+    <div class = "statisticDiv" style = "grid-column-start: 1; grid-column-end: 3;">
+      <h3>1971</h3>
+      <h2 class = "centered">The year the first computer "virus", <em>Creeper</em> was created</h2>
+    </div>
+    <div class = "statisticDiv">
+      <h3> 1.163 BILLION</h3>
+      <h2 class = "centered">The number of new malware strains detected in just 2024</h2>
+    </div>
+    <div class = "statisticDiv">
+      <h3>Every 37 SECONDS</h3>
+      <h2 class = "centered">How often someone falls victim to hacking-related cybercrime</h2>
+    </div>
+  </div>
+</body>
+  <script>
+    function gotoHome(){
+      location.href = "index.html";
+    }
+    function gotoAspects(){
+      location.href = "aspects.html";
+      
+    }
+    function captiveSubmit(){
+      event.preventDefault();
+      formResponse.textContent = "Don't fill these or similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.";
+    }
+    function showPassword() {
+      if (pass.type === "password") {
+        pass.type = "text";
+      } else {
+        pass.type = "password";
+      }
+    }
+    
+    homeBtn.onclick = gotoHome;
+    aspectsBtnNav.onclick = gotoAspects;
+  </script>
+</html>
+
+  
+
+  
