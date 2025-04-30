@@ -26,7 +26,7 @@ Open the GitHub Pages URL to view site.
 https://coronelguasap9809.github.io/computing-assessment/
 ```
 
-If my project doesn't work or run properly, then I don't know what to tell you except "bug".
+If my project doesn't work or run properly, too bad, it's probably under maintenance or something.
 
 ## Contributing
 This repository is mainly so I can run it from GitHub pages so I won't be adding public pull requests. Feel free to do what you want with it by cloning.
