@@ -99,6 +99,22 @@
   text-align: center;
 }
 
+.captivePortal{
+  background-color: lightyellow;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow:0px 5px 5px rgba(20, 20, 20, 0.5);
+}
+
+button:hover{
+    transform: scale(105%);
+}
+
+.disabledBtn:hover{
+  transform: scale(100%);
+}
+
 body{
   font-family: "Inter", sans-serif;
   padding: 0;
@@ -127,6 +143,10 @@ h3{
   margin: 8px;
 }
 
+h5{
+ width: 350px;
+ margin: 10px auto;
+}
 a{
   color: #45ad68;
 }
