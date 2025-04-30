@@ -107,7 +107,11 @@
   box-shadow:0px 5px 5px rgba(20, 20, 20, 0.5);
 }
 
-button:hover{
+.navigatorBtn:hover{
+    transform: scale(105%);
+}
+
+.GO:hover{
     transform: scale(105%);
 }
 
