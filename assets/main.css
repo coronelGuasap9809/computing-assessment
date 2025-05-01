@@ -19,7 +19,7 @@
 }
 
 .aspectsBtn{
-  width: 600px;
+  width: 580px;
   padding: 4px;
   margin: 10px auto;
   display: block;
@@ -75,6 +75,7 @@
   background-color: #ffffff;
   grid-column-start: 1;
   grid-column-end: 3;
+  text-align: left;
 }
 
 .iconContainer{
@@ -114,10 +115,11 @@
 
 .aspectsCard{
   display: flex; 
-  align-items: center; 
   justify-content: space-between; 
   padding-top: 5px;
+  min-height: 220px;
 }
+
 .statisticDiv{
   display: flex;
   padding: 5px;
@@ -220,20 +222,48 @@ ul{
 ::-webkit-scrollbar{
   width: 0;
 }
-@media screen {
-  
-}
-@media screen and (max-width: 768px){
-  .aspectsCard{   
-    flex-direction: column;
+@media screen and (max-width: 1000px){
+  body{
+    background-color: peru;
   }
+
   .content{
-    margin: 20px 50px;
+    margin: 20px 100px;
   }
-  .titleBar{
-    flex-direction: column;
+
+  .aspectsBtn{
+    width: 400px;
   }
-  .navigatorBtn{
-    padding: 4px 30px;
+
+  @media screen and (max-width: 700px){
+    body{
+      background-color: dodgerblue;
+    }
+
+    .aspectsCard{   
+      flex-direction: column;
+    }
+
+    .content{
+      margin: 20px 30px;
+    }
+
+    .titleBar{
+      flex-direction: column;
+    }
+
+    .navigatorBtn{
+      padding: 4px 45px;
+    }
+
+    .aspectsBtn{
+      width: 200px;
+    }
+
+    .aspectsBtn:hover{
+      transform: scale(105%);
+    }
+
   }
+
 }
