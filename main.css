@@ -7,7 +7,6 @@
   box-shadow: 0 5px 5px rgba(20, 20, 20, 0.5);
   justify-content: space-between;
   align-items: center;
-  margin-top: 0;
   z-index: 20;
 }
 
@@ -24,6 +23,10 @@
   padding: 4px;
   margin: 10px auto 5px;
   display: block;
+}
+
+.aspectsBtn:hover{
+  transform: scale(102%);
 }
 
 .disabledBtn{
@@ -46,6 +49,7 @@
   border-radius: 10px;
   margin: 20px auto;
 }
+
 .contentGrid{
   width: 1000px;
   padding: 10px;
@@ -130,13 +134,14 @@
 }
 
 .screenshot:hover{
-  width: 400px;
+  width: 450px;
   transition: 1s;
 }
 
 body{
   font-family: "Inter", sans-serif;
   padding: 0;
+  margin-top: 0;
 }
 
 div{
@@ -176,6 +181,7 @@ button{
   background-color: #50C878;
   color: white;
   font-size: 20px;
+  transition: 0.3s;
 }
 
 ol{
