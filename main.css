@@ -122,6 +122,12 @@
   margin: 10px;
   border-radius: 10px;
   box-shadow:0px 5px 5px rgba(20, 20, 20, 0.5);
+  transition: 0.5s;
+}
+
+.captivePortal:focus-within{
+  transform: scale(102%);
+  transition: 1s;
 }
 
 .screenshot{
