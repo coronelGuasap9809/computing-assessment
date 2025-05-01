@@ -15,6 +15,10 @@
   padding: 4px 7px;
 }
 
+.navigatorBtn:hover{
+  transform: scale(105%);
+}
+
 .aspectsBtn{
   width: 800px;
   padding: 4px;
@@ -25,6 +29,10 @@
 .disabledBtn{
   background-color: #485459; 
   border-color: #374348
+}
+
+.disabledBtn:hover{
+  transform: scale(100%);
 }
 
 .btnContainer{
@@ -87,6 +95,10 @@
   margin-right: 30px;
 }
 
+.GO:hover{
+  transform: scale(105%);
+}
+
 .statisticDiv{
   display: flex;
   padding: 5px;
@@ -113,18 +125,13 @@
   border-style: double;
   border-color: black;
   border-width: 5px;
+  margin: 20px;
+  transition: 0.5s;
 }
 
-.navigatorBtn:hover{
-    transform: scale(105%);
-}
-
-.GO:hover{
-    transform: scale(105%);
-}
-
-.disabledBtn:hover{
-  transform: scale(100%);
+.screenshot:hover{
+  width: 400px;
+  transition: 1s;
 }
 
 body{
