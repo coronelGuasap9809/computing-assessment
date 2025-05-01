@@ -23,8 +23,8 @@
         <img class = "icon" src = "./assets/images/icons/password.png"><!--./icons/something.png-->
       </div>
     </div>
-    <div style = "display: flex; align-items: center; justify-content: space-between;">
-      <div style = "width:850px">
+    <div class = "aspectsCard">
+      <div>
         <p>Setting a strong password is always the first step towards cybersecurity. A good password contains both <strong>uppercase</strong> and <strong>lowercase</strong> letters, <strong>numbers</strong> and <strong>special characters</strong>. If this is too hard for you to remember, you could also create a <strong>"passphrase"</strong> which is 3 random words stringed together.<br><br>It is good practice to <strong>not</strong> repeat passwords across accounts: if one of your passwords is breached, it is possible <strong>all</strong> the other accounts which share it could be in jeopardy. You should not make your password something like a real phrase or a password that is bad for <em>obvious</em> reasons (i.e. 'password', '12345' etc.).<br><br><br>Click on the <strong>GO</strong> button to view the statistics page for <strong>passwords</strong>.</p>
       </div>
       <div class="goContainer">
@@ -40,8 +40,8 @@
         <img class = "icon" src = "./assets/images/icons/spy.png"><!--./icons/something.png-->
       </div>
     </div>
-    <div style = "display: flex; align-items: center; justify-content: space-between;">
-      <div style = "width:850px">
+    <div class = "aspectsCard">
+      <div>
         <p>A factor that defines cybersecurity strongly is privacy. However, even if you maintain privacy on the internet, there may still be threat actors violating your privacy without your knowledge. They achieve this through many methods wich allow them to connect themselves to your systems. These include:</p>
         <ul>
           <li><strong>Evil twins</strong> - malicious wifi networks impersonating legitimate ones</li>
@@ -50,7 +50,9 @@
         </ul>
         <p>Click on the <strong>GO</strong> button to view the statistics page for <strong>preventing unwanted connections</strong>.</p>
       </div>
-      <button class = "GO" id = "connectionsGo"><h1>GO</h1></button>
+      <div class = "goContainer">
+        <button class = "GO" id = "connectionsGo"><h1>GO</h1></button>
+      </div>
     </div>
   </div>
   <div class = "content">
@@ -104,7 +106,7 @@
     function gotoHome(){
       location.href = "index.html";
     }
-
+  
     function gotoPasswords(){
       location.href = "passwords.html"
     }

@@ -19,9 +19,9 @@
 }
 
 .aspectsBtn{
-  width: 800px;
+  width: 600px;
   padding: 4px;
-  margin: 10px auto 5px;
+  margin: 10px auto;
   display: block;
 }
 
@@ -44,10 +44,9 @@
 }
 
 .content{
-  width: 1000px;
   padding: 5px;
   border-radius: 10px;
-  margin: 20px auto;
+  margin: 20px 200px;
   text-align: justify;
 }
 
@@ -66,6 +65,7 @@
   width: 1fr;
   border-radius: 10px;
 }
+
 .divHeader{
   display: flex;
   padding: 5px;
@@ -97,6 +97,7 @@
   height: 95px;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .GO:hover{
@@ -107,11 +108,16 @@
   display: flex; 
   background-color: white; 
   border-radius: 10px; 
-  padding: 5px 30px; 
+  padding: 5px 20px; 
   align-self: normal; 
-  align-items: center;
 }
 
+.aspectsCard{
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding-top: 5px;
+}
 .statisticDiv{
   display: flex;
   padding: 5px;
@@ -166,6 +172,7 @@ div{
 p{
   margin: 5px 10px;
 }
+
 h1{
   font-size: 26px;
   margin: 4px 10px;
@@ -186,6 +193,7 @@ h5{
  width: 350px;
  margin: 10px auto;
 }
+
 a{
   color: #45ad68;
 }
@@ -209,6 +217,23 @@ ul{
   text-align: left;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar{
   width: 0;
+}
+@media screen {
+  
+}
+@media screen and (max-width: 768px){
+  .aspectsCard{   
+    flex-direction: column;
+  }
+  .content{
+    margin: 20px 50px;
+  }
+  .titleBar{
+    flex-direction: column;
+  }
+  .navigatorBtn{
+    padding: 4px 30px;
+  }
 }
