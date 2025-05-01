@@ -103,6 +103,15 @@
   transform: scale(105%);
 }
 
+.goContainer{
+  display: flex; 
+  background-color: white; 
+  border-radius: 10px; 
+  padding: 5px 30px; 
+  align-self: normal; 
+  align-items: center;
+}
+
 .statisticDiv{
   display: flex;
   padding: 5px;
@@ -155,7 +164,7 @@ div{
 }
 
 p{
-  margin: 4px 10px;
+  margin: 5px 10px;
 }
 h1{
   font-size: 26px;
