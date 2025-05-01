@@ -48,6 +48,7 @@
   padding: 5px;
   border-radius: 10px;
   margin: 20px auto;
+  text-align: justify;
 }
 
 .contentGrid{
@@ -193,6 +194,11 @@ button{
 ol{
   font-size: 1.5em;
   margin: 8px;
+  text-align: left;
+}
+
+ul{
+  text-align: left;
 }
 
 ::-webkit-scrollbar {
