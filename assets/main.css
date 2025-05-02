@@ -1,3 +1,5 @@
+/*Style for header bar*/
+
 .titleBar{
   position: sticky;
   top: 0;
@@ -10,6 +12,7 @@
   z-index: 20;
 }
 
+/*Style for navigator buttons in header*/
 .navigatorBtn{
   padding: 4px 7px;
 }
@@ -19,10 +22,7 @@
 }
 
 .aspectsBtn{
-  width: 580px;
-  padding: 4px;
-  margin: 10px auto;
-  display: block;
+  margin: 10px 100px;
 }
 
 .aspectsBtn:hover{
@@ -43,12 +43,18 @@
   padding: 5px;
 }
 
+/*Main, generic, styled container*/
+
 .content{
   padding: 5px;
   border-radius: 10px;
   margin: 20px 200px;
   text-align: justify;
+  display: flex;
+  flex-direction: column;
 }
+
+/*Styles for grid elements and related*/
 
 .contentGrid{
   padding: 10px;
@@ -65,11 +71,33 @@
   border-radius: 10px;
 }
 
+.statisticDiv{
+  display: flex;
+  padding: 5px;
+  border-radius:10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  /*text-align: justify;*/
+}
+
+.statisticDivWide{
+  display: flex;
+  padding: 5px;
+  border-radius:10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  grid-column-start: 1; 
+  grid-column-end: 3;
+}
+
 .divHeader{
   display: flex;
   padding: 5px;
   border-radius:10px;
   justify-content: space-between;
+  align-items: center;
   margin-top: 0;
   background-color: #ffffff;
   grid-column-start: 1;
@@ -86,14 +114,14 @@
 }
 
 .icon{
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0 5px 0;  
 }
 
 .GO{
   display: flex;
-  width: 95px;
+  min-width: 95px;
   height: 95px;
   justify-content: center;
   align-items: center;
@@ -119,18 +147,8 @@
   min-height: 220px;
 }
 
-.statisticDiv{
-  display: flex;
-  padding: 5px;
-  border-radius:10px;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-}
-
-.centered{
-  text-align: center;
-}
+/*INTERACTIVE ELEMENTS*/
+/*Style and focus-within pseudoclass for the fake captive portal in connections.html*/
 
 .captivePortal{
   background-color: lightyellow;
@@ -146,6 +164,8 @@
   transition: 1s;
 }
 
+/*style and hover pseudoclass for the screenshot of an email in phishing.html*/
+
 .screenshot{
   width: 300px;
   border-style: double;
@@ -160,6 +180,8 @@
   transition: 1s;
 }
 
+/*ELEMENTS*/
+
 body{
   font-family: "Inter", sans-serif;
   padding: 0;
@@ -171,28 +193,30 @@ div{
 }
 
 p{
-  margin: 5px 10px;
-}
-
-h1{
-  font-size: 26px;
+  font-size: 1rem;
   margin: 4px 10px;
 }
 
+h1{
+  font-size: 2rem;
+  margin: 4px 10px;
+  text-align: center;
+}
+
 h2{
-  font-size: 20px;
+  font-size: 1.5em;
   font-weight: 600;
   margin: 4px 10px;
 }
 
 h3{
-  font-size: 3em;
-  margin: 8px;
+  font-size: 3rem;
+  margin: 4px 8px;
 }
 
 h5{
- width: 350px;
- margin: 10px auto;
+ margin: 10px;
+ font-size: 0.6rem;
 }
 
 a{
@@ -204,12 +228,12 @@ button{
   border-color: #40B767;
   background-color: #50C878;
   color: white;
-  font-size: 20px;
+  font-size: 1.3rem;
   transition: 0.3s;
 }
 
 ol{
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin: 8px;
   text-align: left;
 }
@@ -222,13 +246,11 @@ ul{
   width: 0;
 }
 
-@media screen and (max-width: 1100px){
-  body{
-    background-color: peru;
-  }
+/*RESPONSIVE LAYOUT*/
 
-  *{
-    font-size: 102%;
+@media screen and (max-width: 1300px){
+  html{
+    font-size: 18px;
   }
 
   .content{
@@ -236,28 +258,33 @@ ul{
   }
 
   .contentGrid{
-    margin: 20px 100px;
+    margin: 20px 300px;
   }
 
   .aspectsBtn{
-    width: 400px;
+    margin: 10px 50px;
   }
 
   .navigatorBtn{
     padding: 4px 35px;
   }
 
-  @media screen and (max-width: 900px){
-    body{
-      background-color: dodgerblue;
-    }
+  .statisticDiv{
+    font-size: 0.8rem;
+  }
 
-    *{
-      font-size: 105%;
-    }
+  .statisticDivWide{
+    grid-column-end: 2;
+    font-size: 0.8rem;
+  }
 
-    h1{
-      font-size: 1.5em;
+  .divHeader{
+    grid-column-end: 2;
+  }
+
+  @media screen and (max-width: 1000px){
+    html{
+      font-size: 25px;
     }
 
     .aspectsCard{   
@@ -281,11 +308,28 @@ ul{
     }
 
     .aspectsBtn{
-      width: 200px;
+      margin: 10px 20px;
+    }
+
+    .GO{
+      padding: 20px 50px;
     }
 
     .aspectsBtn:hover{
       transform: scale(105%);
+    }
+
+    .statisticDiv{
+      font-size: 0.6rem;
+    }
+
+    .statisticDivWide{
+      grid-column-end: 2;
+      font-size: 0.6rem;
+    }
+
+    .divHeader{
+      grid-column-end: 2;
     }
 
   }
