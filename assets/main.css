@@ -40,6 +40,8 @@
   padding: 5px;
 }
 
+/*Main, generic, styled container*/
+
 .content{
   padding: 5px;
   border-radius: 10px;
@@ -48,6 +50,8 @@
   display: flex;
   flex-direction: column;
 }
+
+/*Styles for grid elements and related*/
 
 .contentGrid{
   padding: 10px;
@@ -62,6 +66,27 @@
   height: 100%;
   width: 1fr;
   border-radius: 10px;
+}
+
+.statisticDiv{
+  display: flex;
+  padding: 5px;
+  border-radius:10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  /*text-align: justify;*/
+}
+
+.statisticDivWide{
+  display: flex;
+  padding: 5px;
+  border-radius:10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  grid-column-start: 1; 
+  grid-column-end: 3;
 }
 
 .divHeader{
@@ -119,18 +144,8 @@
   min-height: 220px;
 }
 
-.statisticDiv{
-  display: flex;
-  padding: 5px;
-  border-radius:10px;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-}
-
-.centered{
-  text-align: center;
-}
+/*INTERACTIVE ELEMENTS*/
+/*Style and focus-within pseudoclass for the fake captive portal in connections.html*/
 
 .captivePortal{
   background-color: lightyellow;
@@ -146,6 +161,8 @@
   transition: 1s;
 }
 
+/*style and hover pseudoclass for the screenshot of an email in phishing.html*/
+
 .screenshot{
   width: 300px;
   border-style: double;
@@ -159,6 +176,8 @@
   width: 450px;
   transition: 1s;
 }
+
+/*ELEMENTS*/
 
 body{
   font-family: "Inter", sans-serif;
@@ -182,7 +201,7 @@ h1{
 }
 
 h2{
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 600;
   margin: 4px 10px;
 }
@@ -194,6 +213,7 @@ h3{
 
 h5{
  margin: 10px;
+ font-size: 0.6rem;
 }
 
 a{
@@ -210,7 +230,7 @@ button{
 }
 
 ol{
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin: 8px;
   text-align: left;
 }
@@ -223,7 +243,9 @@ ul{
   width: 0;
 }
 
-@media screen and (max-width: 1023px){
+/*RESPONSIVE LAYOUT*/
+
+@media screen and (max-width: 1300px){
   html{
     font-size: 18px;
   }
@@ -233,7 +255,7 @@ ul{
   }
 
   .contentGrid{
-    margin: 20px 100px;
+    margin: 20px 300px;
   }
 
   .aspectsBtn{
@@ -244,7 +266,20 @@ ul{
     padding: 4px 35px;
   }
 
-  @media screen and (max-width: 767px){
+  .statisticDiv{
+    font-size: 0.8rem;
+  }
+
+  .statisticDivWide{
+    grid-column-end: 2;
+    font-size: 0.8rem;
+  }
+
+  .divHeader{
+    grid-column-end: 2;
+  }
+
+  @media screen and (max-width: 1000px){
     html{
       font-size: 25px;
     }
@@ -274,11 +309,24 @@ ul{
     }
 
     .GO{
-      padding: 0 50px;
+      padding: 20px 50px;
     }
 
     .aspectsBtn:hover{
       transform: scale(105%);
+    }
+
+    .statisticDiv{
+      font-size: 0.6rem;
+    }
+
+    .statisticDivWide{
+      grid-column-end: 2;
+      font-size: 0.6rem;
+    }
+
+    .divHeader{
+      grid-column-end: 2;
     }
 
   }
