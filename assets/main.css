@@ -1,3 +1,5 @@
+/*Style for header bar*/
+
 .titleBar{
   position: sticky;
   top: 0;
@@ -10,6 +12,7 @@
   z-index: 20;
 }
 
+/*Style for navigator buttons in header*/
 .navigatorBtn{
   padding: 4px 7px;
 }
