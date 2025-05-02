@@ -235,9 +235,10 @@ ul{
     width: 400px;
   }
 
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: 900px){
     body{
       background-color: dodgerblue;
+      font-size: 1.2em;
     }
 
     .aspectsCard{   
