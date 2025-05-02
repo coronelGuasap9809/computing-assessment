@@ -1,3 +1,7 @@
+/*CLASSES*/
+
+/*CLASSES FOR HEADER/MENUBAR AND RELATED ELEMENTS*/
+/*header/navigation bar*/
 .titleBar{
   position: sticky;
   top: 0;
@@ -9,101 +13,78 @@
   align-items: center;
   z-index: 20;
 }
-
-.navigatorBtn{
-  padding: 4px 7px;
-}
-
-.navigatorBtn:hover{
-  transform: scale(105%);
-}
-
-.aspectsBtn{
-  width: 800px;
-  padding: 4px;
-  margin: 10px auto 5px;
-  display: block;
-}
-
-.aspectsBtn:hover{
-  transform: scale(102%);
-}
-
-.disabledBtn{
-  background-color: #485459; 
-  border-color: #374348
-}
-
-.disabledBtn:hover{
-  transform: scale(100%);
-}
-
+/*container for navigator buttons (below)*/
 .btnContainer{
   margin: 0;
   padding: 5px;
 }
-
-.content{
-  width: 1000px;
-  padding: 5px;
-  border-radius: 10px;
-  margin: 20px auto;
-  text-align: justify;
+/*Style and hover pseudoclass for navigator buttons in header bar*/
+.navigatorBtn{
+  padding: 4px 7px;
+}
+.navigatorBtn:hover{
+  transform: scale(105%);
+}
+/*Style and hover pseudoclass for wide button that leads to aspects page*/
+.aspectsBtn{
+  margin: 10px 100px;
+}
+.aspectsBtn:hover{
+  transform: scale(102%);
+}
+/*disabled button*/
+.disabledBtn{
+  background-color: #485459; 
+  border-color: #374348
+}
+/*prevents disabled button from enlarging when hovered over*/
+.disabledBtn:hover{
+  transform: scale(100%);
 }
 
+
+/*CLASSES FOR GENERAL ELEMENTS*/
+/*generic, styled container for text etc.*/
+.content{
+  padding: 5px;
+  border-radius: 10px;
+  margin: 20px 200px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+/*header intended to go inside generic container(above)*/
+.divHeader{
+  display: flex;
+  padding: 5px;
+  border-radius:10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  background-color: #ffffff;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: left;
+}
+
+
+/*CLASSES FOR GRID AND RELATED ELEMENTS*/
+/*container for grid*/
 .contentGrid{
-  width: 1000px;
   padding: 10px;
   border-radius: 10px;
-  margin: 20px auto;
+  margin: 20px 200px;
   display: grid;
   gap: 15px;
 }
-
+/*image formatted to fit in grid*/
 .gridImg{
   width: 100%;
   height: 100%;
   width: 1fr;
   border-radius: 10px;
 }
-.divHeader{
-  display: flex;
-  padding: 5px;
-  border-radius:10px;
-  justify-content: space-between;
-  margin-top: 0;
-  background-color: #ffffff;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.iconContainer{
-  margin: 0;
-  padding: 5px;
-  display: flex;
-  border-radius: 10px;
-  justify-content: center;
-}
-
-.icon{
-  width: 24px;
-  height: 24px;
-  padding: 0 5px 0;  
-}
-
-.GO{
-  display: flex;
-  width: 95px;
-  height: 95px;
-  justify-content: center;
-  align-items: center;
-  margin-right: 30px;
-}
-
-.GO:hover{
-  transform: scale(105%);
-}
-
+/*div formatted to fit in grid*/
 .statisticDiv{
   display: flex;
   padding: 5px;
@@ -112,11 +93,65 @@
   align-items: center;
   background-color: #ffffff;
 }
-
-.centered{
-  text-align: center;
+/*wider div (takes up 2 columns) formatted for the grid. dedicated class for responsive layout*/
+.statisticDivWide{
+  display: flex;
+  padding: 5px;
+  border-radius:10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  grid-column-start: 1; 
+  grid-column-end: 3;
 }
 
+
+/*CLASSES FOR ASPECTS PAGE AND RELATED ELEMENTS*/
+/*small container for icons*/
+.iconContainer{
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+}
+/*standard icon. 1.5rem = 24px = standard resolution of the MD3 icons used*/
+.icon{
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 5px 0;  
+}
+/*fits inside .container, under .divHeader. for responsive layout of aspecy cards in aspects.html.*/
+.aspectsCard{
+  display: flex; 
+  justify-content: space-between; 
+  padding-top: 5px;
+  min-height: 220px;
+}
+/*responsive container for holding GO button (below)*/
+.goContainer{
+  display: flex; 
+  background-color: white; 
+  border-radius: 10px; 
+  padding: 5px 20px; 
+  align-self: normal; 
+}
+/*Style and hover pseudoclass for "GO" button that leads to aspect page*/
+.GO{
+  display: flex;
+  min-width: 95px;
+  height: 95px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.GO:hover{
+  transform: scale(105%);
+}
+
+
+/*CLASSES FOR INTERACTIVE ELEMENTS*/
+/*Style and focus-within pseudoclass for the fake captive portal in connections.html*/
 .captivePortal{
   background-color: lightyellow;
   padding: 10px;
@@ -125,12 +160,11 @@
   box-shadow:0px 5px 5px rgba(20, 20, 20, 0.5);
   transition: 0.5s;
 }
-
 .captivePortal:focus-within{
   transform: scale(102%);
   transition: 1s;
 }
-
+/*style and hover pseudoclass for the screenshot of an email in phishing.html*/
 .screenshot{
   width: 300px;
   border-style: double;
@@ -139,11 +173,12 @@
   margin: 20px;
   transition: 0.5s;
 }
-
 .screenshot:hover{
   width: 450px;
   transition: 1s;
 }
+
+/*ELEMENTS*/
 
 body{
   font-family: "Inter", sans-serif;
@@ -156,28 +191,32 @@ div{
 }
 
 p{
-  margin: 4px 10px;
-}
-h1{
-  font-size: 26px;
+  font-size: 1rem;
   margin: 4px 10px;
 }
 
+h1{
+  font-size: 2rem;
+  margin: 4px 10px;
+  text-align: center;
+}
+
 h2{
-  font-size: 20px;
+  font-size: 1.5em;
   font-weight: 600;
   margin: 4px 10px;
 }
 
 h3{
-  font-size: 3em;
-  margin: 8px;
+  font-size: 3rem;
+  margin: 4px 8px;
 }
 
 h5{
- width: 350px;
- margin: 10px auto;
+ margin: 10px;
+ font-size: 0.6rem;
 }
+
 a{
   color: #45ad68;
 }
@@ -187,12 +226,12 @@ button{
   border-color: #40B767;
   background-color: #50C878;
   color: white;
-  font-size: 20px;
+  font-size: 1.3rem;
   transition: 0.3s;
 }
 
 ol{
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin: 8px;
   text-align: left;
 }
@@ -201,6 +240,99 @@ ul{
   text-align: left;
 }
 
-::-webkit-scrollbar {
+
+/*RESPONSIVE LAYOUT*/
+
+/*removes scrollbar that messes up layout by setting its width to 0*/
+::-webkit-scrollbar{
   width: 0;
+}
+
+/*responsive layout breakpoints and modifications*/
+@media screen and (max-width: 1300px){
+  html{
+    font-size: 18px;
+  }
+
+  .content{
+    margin: 20px 100px;
+  }
+
+  .contentGrid{
+    margin: 20px 300px;
+  }
+
+  .aspectsBtn{
+    margin: 10px 50px;
+  }
+
+  .navigatorBtn{
+    padding: 4px 35px;
+  }
+
+  .statisticDiv{
+    font-size: 0.8rem;
+  }
+
+  .statisticDivWide{
+    grid-column-end: 2;
+    font-size: 0.8rem;
+  }
+
+  .divHeader{
+    grid-column-end: 2;
+  }
+
+  @media screen and (max-width: 1000px){
+    html{
+      font-size: 37.5px;
+    }
+
+    .aspectsCard{   
+      flex-direction: column;
+    }
+
+    .content{
+      margin: 20px 30px;
+    }
+
+    .contentGrid{
+      margin: 20px 30px
+    }
+
+    .titleBar{
+      flex-direction: column;
+    }
+
+    .navigatorBtn{
+      padding: 4px 45px;
+    }
+
+    .aspectsBtn{
+      margin: 10px 20px;
+    }
+
+    .GO{
+      padding: 20px 50px;
+    }
+
+    .aspectsBtn:hover{
+      transform: scale(105%);
+    }
+
+    .statisticDiv{
+      font-size: 0.6rem;
+    }
+
+    .statisticDivWide{
+      grid-column-end: 2;
+      font-size: 0.6rem;
+    }
+
+    .divHeader{
+      grid-column-end: 2;
+    }
+
+  }
+
 }
