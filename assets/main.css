@@ -166,7 +166,7 @@
 }
 /*style and hover pseudoclass for the screenshot of an email in phishing.html*/
 .screenshot{
-  width: 300px;
+  width: 19rem;
   border-style: double;
   border-color: black;
   border-width: 5px;
@@ -174,7 +174,7 @@
   transition: 0.5s;
 }
 .screenshot:hover{
-  width: 450px;
+  width: 28rem;
   transition: 1s;
 }
 
@@ -281,6 +281,14 @@ ul{
 
   .divHeader{
     grid-column-end: 2;
+  }    
+  
+  .screenshot{
+    width: 21rem;
+  }
+  
+  .screenshot:hover{
+    width: 21rem;
   }
 
   @media screen and (max-width: 1000px){
@@ -331,6 +339,10 @@ ul{
 
     .divHeader{
       grid-column-end: 2;
+    }
+
+    .screenshot:hover{
+      width: 19rem;
     }
 
   }
