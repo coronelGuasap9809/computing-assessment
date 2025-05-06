@@ -179,25 +179,32 @@
 }
 
 /*DARKMODE STYLES*/
-
-.dark{
+/*Darkmode base colour*/
+.dark,
+.dark .divHeader,
+.dark .statisticDiv,
+.dark .statisticDivWide{
   background-color: #0e1116;
   color: white;
 }
 
-.darkAccent{
+/*Darkmode accent colour*/
+.dark .aspectsCard,
+.dark p,
+.dark div{
   background-color: #272c35;
   color: white;
 }
 
-/*Invert black icon colours to whitw*/
-.dark .icon {
-  filter: invert(1) brightness(2); /* Inverts black to white and brightens */
+/* Footer-specific styles */
+.dark footer > p{
+  color: rgba(255, 255, 255, 0.5);
+  background: none;
 }
 
-.dark footer > p {
-  color: rgba(255, 255, 255, 0.5); /* Change text color to white */
-  background: none; /* Ensure no background is applied */
+/* Icon style in dark mode */
+.dark .icon{
+  filter: invert(1) brightness(2);
 }
 
 /*ELEMENTS*/
