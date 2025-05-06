@@ -178,7 +178,8 @@
   transition: 1s;
 }
 
-/*Darkmode CSS*/
+/*DARKMODE STYLES*/
+
 .dark{
   background-color: #0e1116;
   color: white;
@@ -187,6 +188,16 @@
 .darkAccent{
   background-color: #272c35;
   color: white;
+}
+
+/*Invert black icon colours to whitw*/
+.dark .icon {
+  filter: invert(1) brightness(2); /* Inverts black to white and brightens */
+}
+
+.dark footer > p {
+  color: white; /* Change text color to white */
+  background: none; /* Ensure no background is applied */
 }
 
 /*ELEMENTS*/
