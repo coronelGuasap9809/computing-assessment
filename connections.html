@@ -12,8 +12,8 @@
   <div class = "titleBar">
     <h1>Securi-smart Aspect &mdash; <em>Connections</em></h1>
     <div class = "btnContainer">
-      <button id = "homeBtn" class = "navigatorBtn">Home</button>
-      <button id = "aspectsBtnNav" class = "navigatorBtn">Aspects</button>
+      <a class = "button navigatorBtn" href = "index.html">Home</a>
+      <a class = "button navigatorBtn" href = "aspects.html">Aspects</a>
     </div>
   </div> 
   <div class = "contentGrid">
@@ -75,16 +75,10 @@
   </footer>
   <script src = "./assets/script.js"></script>
   <script>
-    function gotoHome(){
-      location.href = "index.html";
-    }
-    function gotoAspects(){
-      location.href = "aspects.html";
-      
-    }
     function captiveSubmit(){
       event.preventDefault();
-      formResponse.textContent = "Don't fill these or similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.";
+      alert("WARNING: Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.")
+      formResponse.textContent = "Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.";
     }
     function showPassword() {
       if (pass.type === "password") {
@@ -93,9 +87,6 @@
         pass.type = "password";
       }
     }
-    
-    homeBtn.onclick = gotoHome;
-    aspectsBtnNav.onclick = gotoAspects;
   </script>
 </body>
 </html>
