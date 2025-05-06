@@ -242,6 +242,20 @@ ul{
   text-align: left;
 }
 
+label{
+  font-size: 1rem;
+}
+
+input[type = "password"], input[type = "email"]{
+  height: 1rem;
+}
+
+input[type = "checkbox"]{
+  accent-color: #50C878;
+  width: 1rem;
+  height: 1rem;
+}
+
 footer{
 font-size: 0.6rem;
 color: rgba(0, 0, 0, 0.5);
@@ -253,10 +267,8 @@ left: 0;
 border-radius: 5px 5px 5px 0;
 backdrop-filter: blur(6px);
 -webkit-backdrop-filter: blur(6px);
-}
-
-input[type = "checkbox"]{
-  accent-color: green;
+transform: scale(80%);
+transform-origin: left bottom;
 }
 
 /*RESPONSIVE LAYOUT*/
