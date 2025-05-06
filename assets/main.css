@@ -28,6 +28,7 @@
 /*Style and hover pseudoclass for wide button that leads to aspects page*/
 .aspectsBtn{
   margin: 10px 100px;
+  text-align: center;
 }
 .aspectsBtn:hover{
   transform: scale(102%);
@@ -35,12 +36,9 @@
 /*disabled button*/
 .disabledBtn{
   background-color: #485459; 
-  border-color: #374348
+  border-color: #374348;
 }
 /*prevents disabled button from enlarging when hovered over*/
-.disabledBtn:hover{
-  transform: scale(100%);
-}
 
 
 /*CLASSES FOR GENERAL ELEMENTS*/
@@ -66,7 +64,23 @@
   grid-column-end: 3;
   text-align: left;
 }
-
+/*links that look like buttons (sneaky, I know) and :hover pseudoclass*/
+.button{
+  display: inline-block;
+  border-radius: 7px;
+  border-style: solid;
+  border-color: #40B767;
+  background-color: #50C878;
+  color: white;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.button[aria-disabled = "true"]{
+  background-color: #485459; 
+  border-color: #374348;
+  transform: scale(100%);
+}
 
 /*CLASSES FOR GRID AND RELATED ELEMENTS*/
 /*container for grid*/
@@ -248,15 +262,6 @@ h5{
 
 a{
   color: #45ad68;
-}
-
-button{
-  border-radius: 7px;
-  border-color: #40B767;
-  background-color: #50C878;
-  color: white;
-  font-size: 1.3rem;
-  transition: 0.3s;
 }
 
 ol{
