@@ -16,7 +16,9 @@
 /*container for navigator buttons (below)*/
 .btnContainer{
   margin: 0;
-  padding: 5px;
+  padding: 6px;
+  background-color: white;
+  border-radius: 10px;
 }
 /*Style and hover pseudoclass for navigator buttons in header bar*/
 .navigatorBtn{
@@ -61,7 +63,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 0;
-  background-color: #ffffff;
+  background-color: white;
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: left;
@@ -91,7 +93,7 @@
   border-radius:10px;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: white;
 }
 /*wider div (takes up 2 columns) formatted for the grid. dedicated class for responsive layout*/
 .statisticDivWide{
@@ -100,7 +102,7 @@
   border-radius:10px;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: white;
   grid-column-start: 1; 
   grid-column-end: 3;
 }
@@ -343,6 +345,10 @@ ul{
 
     .screenshot:hover{
       width: 19rem;
+    }
+
+    .btnContainer{
+      padding: 15px;
     }
 
   }
