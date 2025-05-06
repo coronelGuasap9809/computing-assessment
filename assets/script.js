@@ -37,6 +37,11 @@ darkMode.onclick = darkModeFunc;
 
         intervalId = setInterval(() => {
             darkModeFunc(); // Toggle between light and dark mode
+            if (document.getElementById("darkMode").checked == true){
+                document.getElementById("darkMode").checked = false;
+            }else{
+                document.getElementById("darkMode").checked = true;
+            }
         }, 10); // Interval in milliseconds
     }
 
