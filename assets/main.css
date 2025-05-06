@@ -216,7 +216,7 @@ h3{
 
 h5{
  margin: 10px;
- font-size: 0.6rem;
+ font-size: 0.8rem;
 }
 
 a{
@@ -243,11 +243,21 @@ ul{
 }
 
 label{
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
-input[type = "password"], input[type = "email"]{
+input[type = "password"], input[type = "email"], input[type = "text"]{
   height: 1rem;
+  width: 15rem;
+  font-size: 0.8rem;
+}
+
+input[type = "submit"], input[type = "reset"]{
+  font-size: 0.8rem;
+}
+
+input::placeholder{
+  font-size: 0.8rem;
 }
 
 input[type = "checkbox"]{
@@ -324,6 +334,10 @@ transform-origin: left bottom;
   @media screen and (max-width: 1000px){
     html{
       font-size: 37.5px;
+    }
+
+    input[type = "password"], input[type = "email"]{
+      border-radius: 5px;
     }
 
     .aspectsCard{   
