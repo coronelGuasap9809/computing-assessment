@@ -17,8 +17,6 @@
 .btnContainer{
   margin: 0;
   padding: 6px;
-  background-color: white;
-  border-radius: 10px;
 }
 /*Style and hover pseudoclass for navigator buttons in header bar*/
 .navigatorBtn{
@@ -59,7 +57,7 @@
 .divHeader{
   display: flex;
   padding: 5px;
-  border-radius:10px;
+  border-radius: 5px;
   justify-content: space-between;
   align-items: center;
   margin-top: 0;
@@ -111,10 +109,10 @@
 /*CLASSES FOR ASPECTS PAGE AND RELATED ELEMENTS*/
 /*small container for icons*/
 .iconContainer{
-  margin: 0;
+  margin: 0 1px 0 0;
   padding: 5px;
   display: flex;
-  border-radius: 10px;
+  border-radius: 4px;
   justify-content: center;
 }
 /*standard icon. 1.5rem = 24px = standard resolution of the MD3 icons used*/
@@ -155,12 +153,12 @@
 /*CLASSES FOR INTERACTIVE ELEMENTS*/
 /*Style and focus-within pseudoclass for the fake captive portal in connections.html*/
 .captivePortal{
-  background-color: lightyellow;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   box-shadow:0px 5px 5px rgba(20, 20, 20, 0.5);
   transition: 0.5s;
+  color: black;
 }
 .captivePortal:focus-within{
   transform: scale(102%);
@@ -178,6 +176,17 @@
 .screenshot:hover{
   width: 28rem;
   transition: 1s;
+}
+
+/*Darkmode CSS*/
+.dark{
+  background-color: #0e1116;
+  color: white;
+}
+
+.darkAccent{
+  background-color: #272c35;
+  color: white;
 }
 
 /*ELEMENTS*/
