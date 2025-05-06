@@ -2,16 +2,31 @@
 <html>
 <head>
   <link href = "./assets/main.css" rel = "stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="./assets/images/icons/favicon.ico">
   <title>How did you get here?</title>
 </head>
 <body>
-  <h1>Gonk</h1>
+  <div class = "titleBar">
+    <h1>Securi-smart &mdash; <em>GONK</em>: Secret Placeholder Page</h1>
+  </div>
   <br>
-  <p>You might want to head back:</p>
-  <br>
-  <br>
-  <a href = "index.html">Back</a>
+  <div class = "content">
+    <div class = "divHeader"><h2>Hello?</h2></div>
+    <p>How did you get here?</p>
+    <p>Whatever. Here, enjoy this beautiful interactive image:</p>
+    <img class = "screenshot" src = "./assets/images/gonk.jpg">
+    <p>Thank you for your stay, we hope you enjoyed your time with <strong>placeholder</strong> airlines.</p>
+    <p>Go back to the shadow!</p>
+    <a class = "button aspectsBtn" href = "history.back()">Back</a>
+  </div>
+  <footer>
+    <p>This site is on <a href = "https://github.com/coronelGuasap9809/computing-assessment" target = "_blank">GitHub</a></p>
+    <p>|</p>
+    <p>Toggle dark mode: <input type = "checkbox" id = "darkMode"></p>
+  </footer>
   <script src = "./assets/script.js"></script>
 </body>
 </html>

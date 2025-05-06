@@ -33,13 +33,6 @@
 .aspectsBtn:hover{
   transform: scale(102%);
 }
-/*disabled button*/
-.disabledBtn{
-  background-color: #485459; 
-  border-color: #374348;
-}
-/*prevents disabled button from enlarging when hovered over*/
-
 
 /*CLASSES FOR GENERAL ELEMENTS*/
 /*generic, styled container for text etc.*/
@@ -64,7 +57,7 @@
   grid-column-end: 3;
   text-align: left;
 }
-/*links that look like buttons (sneaky, I know) and :hover pseudoclass*/
+/*styles for links that look like buttons (sneaky, I know) and for when aria-disabled = true*/
 .button{
   display: inline-block;
   border-radius: 7px;
@@ -192,7 +185,7 @@
   transition: 1s;
 }
 
-/*DARKMODE STYLES*/
+/*CLASSES FOR DARKMODE*/
 /*Darkmode base colour*/
 .dark,
 .dark .divHeader,
@@ -201,7 +194,6 @@
   background-color: #0e1116;
   color: white;
 }
-
 /*Darkmode accent colour*/
 .dark .aspectsCard,
 .dark p,
@@ -209,19 +201,20 @@
   background-color: #272c35;
   color: white;
 }
-
 /* Footer-specific styles */
 .dark footer > p{
   color: rgba(255, 255, 255, 0.5);
   background: none;
 }
-
 /* Icon style in dark mode */
 .dark .icon{
   filter: invert(1) brightness(2);
 }
+.dark .screenshot{
+  border-color: white;
+}
 
-/*ELEMENTS*/
+/*DEFAULT TAG STYLES*/
 
 body{
   font-family: "Inter", sans-serif;
@@ -278,13 +271,16 @@ label{
   font-size: 0.8rem;
 }
 
-input[type = "password"], input[type = "email"], input[type = "text"]{
+input[type = "password"], 
+input[type = "email"], 
+input[type = "text"]{
   height: 1rem;
   width: 15rem;
   font-size: 0.8rem;
 }
 
-input[type = "submit"], input[type = "reset"]{
+input[type = "submit"], 
+input[type = "reset"]{
   font-size: 0.8rem;
 }
 
