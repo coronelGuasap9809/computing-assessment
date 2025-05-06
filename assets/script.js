@@ -1,20 +1,5 @@
 function darkModeFunc() {
-    const darkAccentSelectors = ["p", "div:not(.divHeader):not(.statisticDiv):not(.statisticDivWide)"]; // Add class selectors here
-    const darkSelectors = ["body", ".statisticDiv", ".statisticDivWide", ".divHeader", ".goContainer", ".aspectsCard", ".iconContainer"]; // Add tag and class selectors here
-
-    darkAccentSelectors.forEach(selector => {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(element => {
-            element.classList.toggle("darkAccent");
-        });
-    });
-
-    darkSelectors.forEach(selector => {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(element => {
-            element.classList.toggle("dark");
-        });
-    });
+    const isDarkMode = document.documentElement.classList.toggle("dark");
 
     // Save the checkbox state to localStorage
     const darkModeCheckbox = document.getElementById("darkMode");
@@ -30,7 +15,7 @@ window.onload = () => {
     darkModeCheckbox.checked = darkModeEnabled;
 
     if (darkModeEnabled) {
-        darkModeFunc(); // Apply dark mode
+        document.documentElement.classList.add("dark"); // Apply dark mode
     }
 };
 
@@ -38,6 +23,9 @@ window.onload = () => {
 const darkMode = document.getElementById("darkMode");
 darkMode.onclick = darkModeFunc;
 
+
+
+//Funnies:
 (function () {
     let intervalId = null;
     function toggleHeadacheMode() {
@@ -49,6 +37,11 @@ darkMode.onclick = darkModeFunc;
 
         intervalId = setInterval(() => {
             darkModeFunc(); // Toggle between light and dark mode
+            if (document.getElementById("darkMode").checked == true){
+                document.getElementById("darkMode").checked = false;
+            }else{
+                document.getElementById("darkMode").checked = true;
+            }
         }, 10); // Interval in milliseconds
     }
 
