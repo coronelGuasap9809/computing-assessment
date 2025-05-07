@@ -177,7 +177,7 @@
   border-style: double;
   border-color: black;
   border-width: 5px;
-  margin: 20px;
+  margin: 20px auto;
   transition: 0.5s;
 }
 .screenshot:hover{
