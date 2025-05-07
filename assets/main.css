@@ -33,6 +33,11 @@
 .aspectsBtn:hover{
   transform: scale(102%);
 }
+.contentGrid > .aspectsBtn{
+  display: inline;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
 /*CLASSES FOR GENERAL ELEMENTS*/
 /*generic, styled container for text etc.*/
@@ -208,7 +213,7 @@
   background: none;
 }
 /* Icon style in dark mode */
-.dark .icon{
+.dark .icon:not(.no-invert) {
   filter: invert(1) brightness(2);
 }
 .dark .screenshot{
@@ -420,6 +425,10 @@ transform-origin: left bottom;
 
     .btnContainer{
       padding: 15px;
+    }
+
+    .contentGrid > .aspectsBtn{
+      grid-column-end: 2;
     }
 
   }
