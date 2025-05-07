@@ -160,6 +160,15 @@
 .GO:hover{
   transform: scale(105%);
 }
+.check-icon-label{
+  font-weight: bold;
+  background-color: #50C878;
+  color: white;
+  padding: 5px 3px 0 3px;
+  border-radius: 3px;
+  font-size: 0.8rem; 
+  margin-left: 0;
+}
 
 
 /*CLASSES FOR INTERACTIVE ELEMENTS*/
@@ -431,6 +440,8 @@ transform-origin: left bottom;
       grid-column-end: 2;
     }
 
+    .check-icon-label{
+      padding: 11px 3px 0 3px;
   }
 
 }

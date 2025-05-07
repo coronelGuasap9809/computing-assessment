@@ -81,13 +81,20 @@ function updateAspectsPage() {
         if (iconContainer) {
             // Check if the icon already exists to avoid duplicates
             if (!iconContainer.querySelector(`img[alt="${aspectName} complete"]`)) {
+                // Create the check icon
                 const checkIcon = document.createElement("img");
                 checkIcon.src = "./assets/images/icons/aspectCompleteIcon.png";
                 checkIcon.alt = `${aspectName} complete`;
                 checkIcon.classList.add("icon", "no-invert"); // Add the no-invert class
 
-                // Insert the new icon as the first child of the iconContainer
-                iconContainer.insertBefore(checkIcon, iconContainer.firstChild);
+                // Create the label for the check icon
+                const checkIconLabel = document.createElement("label");
+                checkIconLabel.textContent = "COMPLETE"; // Set the label text
+                checkIconLabel.classList.add("check-icon-label"); // Optional: Add a class for styling
+
+                // Insert the icon and label into the container
+                iconContainer.insertBefore(checkIcon, iconContainer.firstChild); // Add the icon first
+                iconContainer.insertBefore(checkIconLabel, checkIcon.nextSibling); // Add the label after the icon
             }
         }
     });
