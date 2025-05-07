@@ -23,8 +23,6 @@ window.onload = () => {
 const darkMode = document.getElementById("darkMode");
 darkMode.onclick = darkModeFunc;
 
-
-
 //Funnies:
 (function () {
     let intervalId = null;

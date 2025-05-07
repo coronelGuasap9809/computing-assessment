@@ -138,8 +138,8 @@
 /*responsive container for holding GO button (below)*/
 .goContainer{
   display: flex; 
-  background-color: white; 
-  border-radius: 10px; 
+  border-radius: 5px; 
+  background-color: white;
   padding: 5px 20px; 
   align-self: normal; 
 }
@@ -190,7 +190,8 @@
 .dark,
 .dark .divHeader,
 .dark .statisticDiv,
-.dark .statisticDivWide{
+.dark .statisticDivWide,
+.dark .goContainer{
   background-color: #0e1116;
   color: white;
 }
