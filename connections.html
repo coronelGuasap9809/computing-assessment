@@ -30,9 +30,9 @@
         <form onsubmit = "captiveSubmit();">
           <h5>Welcome to Public_Free_WiFi. Please log in to access.</h5>
           <label for = "email">Email</label><br>
-          <input type = "email" name = "email" placeholder = "example@gmail.com"><br>
+          <input type = "email" name = "email" id = "emailInput" placeholder = "example@gmail.com"><br>
           <label for = "pass">Password</label><br>
-          <input type = "password" name = "pass" placeholder = "Your password" id = "pass"><br><br>
+          <input type = "password" name = "pass" id = "passwordInput" placeholder = "Your password"><br><br>
           <input type = "checkbox" name = "showPass" onclick = "showPassword()">
           <label for = "showpass">Show Password</label><br><br>
           <br>
@@ -77,14 +77,18 @@
   <script>
     function captiveSubmit(){
       event.preventDefault();
-      alert("WARNING: Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.")
-      formResponse.textContent = "Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.";
+      if (document.getElementById("emailInput").value == "gonk@gmail.com" && document.getElementById("passwordInput").value == "gonk1234"){
+        
+      }else{
+        alert("WARNING: Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.")
+        formResponse.textContent = "Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.";
+      }
     }
     function showPassword() {
-      if (pass.type === "password") {
-        pass.type = "text";
+      if (document.getElementById("passwordInput").type === "password") {
+        document.getElementById("passwordInput").type = "text";
       } else {
-        pass.type = "password";
+       document.getElementById("passwordInput").type = "password";
       }
     }
   </script>
