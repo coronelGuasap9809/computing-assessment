@@ -77,9 +77,9 @@
   <script>
     function captiveSubmit(){
       event.preventDefault();
-      if (document.getElementById("emailInput").value == "gonk@gmail.com" && document.getElementById("passwordInput").value == "gonk1234"){
-        
-      }else{
+      if (document.getElementById("emailInput").value == "gonk@gmail.com" && document.getElementById("passwordInput").value == "gonk1234") {
+        location.href = "placeholder.html";
+      } else {
         alert("WARNING: Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.")
         formResponse.textContent = "Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.";
       }
