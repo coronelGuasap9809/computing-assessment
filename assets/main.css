@@ -33,6 +33,11 @@
 .aspectsBtn:hover{
   transform: scale(102%);
 }
+.contentGrid > .aspectsBtn{
+  display: inline;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
 /*CLASSES FOR GENERAL ELEMENTS*/
 /*generic, styled container for text etc.*/
@@ -155,6 +160,15 @@
 .GO:hover{
   transform: scale(105%);
 }
+.check-icon-label{
+  font-weight: bold;
+  background-color: #50C878;
+  color: white;
+  padding: 5px 3px 0 3px;
+  border-radius: 3px;
+  font-size: 0.8rem; 
+  margin-left: 0;
+}
 
 
 /*CLASSES FOR INTERACTIVE ELEMENTS*/
@@ -208,7 +222,7 @@
   background: none;
 }
 /* Icon style in dark mode */
-.dark .icon{
+.dark .icon:not(.no-invert) {
   filter: invert(1) brightness(2);
 }
 .dark .screenshot{
@@ -422,6 +436,14 @@ transform-origin: left bottom;
       padding: 15px;
     }
 
+    .contentGrid > .aspectsBtn{
+      grid-column-end: 2;
+    }
+
+    .check-icon-label{
+      padding: 11px 3px 0 3px;
+    }
+    
   }
 
 }
