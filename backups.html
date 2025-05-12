@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href = "./assets/main.css" rel = "stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./assets/images/icons/favicon.ico">
+  <meta name="format-detection" content="telephone=no">
+  <title>Securi-smart | Backups</title>
+</head>
+<body>
+  <div class = "titleBar">
+    <h1>Securi-smart Aspect &mdash; <em>Backups</em></h1>
+    <div class = "btnContainer">
+      <a class = "button navigatorBtn" href = "index.html">Home</a>
+      <a class = "button navigatorBtn" href = "aspects.html">Aspects</a>
+    </div>
+  </div> 
+  <div class = "contentGrid">
+    <div class = "divHeader">
+      <h3>The Stats</h3>
+    </div>
+    <div class = "statisticDiv">
+      <h3>76%</h3>
+      <h2>The percentage of organizations that have experienced critical data loss</h2>
+    </div>
+    <img class = "gridImg" src = "./assets/images/floppys.png" alt ="Many coloured floppy disks on a table"><!--./images/stressed.jpeg-->
+    <div class = "statisticDiv" style = "flex-direction: column;">
+      <div class = captivePortal>
+        <h5>Backup Settings: How good is your backup?</h5>
+          <form onsubmit = "captiveSubmit(event);">
+            <h5>Type:</h5>
+            <input type = "radio" name = "type" id = "partial" value = "1">
+              <label for = "partial">Partial</label><br>
+            <input type = "radio" name = "type" id = "differential" value = "2">
+              <label for = "differential">Differential</label><br>
+            <input type = "radio" name = "type" id = "full" value = "3">
+              <label for = "full">Full</label><br>
+            <h5>Frequency:</h5>
+            <input type = "radio" name = "freq" id = "monthly" value = "1">
+              <label for = "partial">Monthly</label><br>
+            <input type = "radio" name = "freq" id = "weekly" value = "2">
+              <label for = "differential">Weekly</label><br>
+            <input type = "radio" name = "freq" id = "daily" value = "3">
+              <label for = "full">Daily</label><br>
+            <br>
+            <input type = "submit">
+            <input type = "reset">
+          </form>
+      </div>
+      <h2 id = "scoreH2">Check the efficacy of your backup settings.</h2>
+    </div>
+    <div class = "statisticDiv">
+      <h3>555 MILLION</h3>
+      <h2>The amount of passwords stolen and published on the dark web in the span of 3 years<h2>
+    </div>
+    <div class = "statisticDiv">
+      <h3>81%</h3>
+      <h2>The percentage of enterprise data breaches that are due to weak passwords</h2>
+    </div>
+    <img class = "gridImg" src = "./assets/images/boardroom.jpeg" alt ="a group of businesmen looking anxiously at a computer"><!--./images/boardroom.jpeg-->
+    <div class = "statisticDivWide">
+      <h3>About 1 in 5</h3>
+      <h2>The rate at which hackers <em>guess</em> weak passwords correctly</h2>
+    </div>
+    <div class = "statisticDiv">
+      <h3>93%</h3>
+      <h2 >The percentage of companies that file for banckrupcy within a year of losing data for more than 10 days</h2>
+    </div>
+    <div class = "statisticDiv">
+      <h3>76%</h3>
+      <h2>The estimated percentage of targeted attacks that could be avoided by simply using multi-factor authentication.</h2>
+    </div>
+    <a id = "backupsComplete" class = "button aspectsBtn" href = "aspects.html">Complete this Aspect</a>
+  </div>
+  <br>
+  <br>
+  <footer>
+    <p>This site is on <a href = "https://github.com/coronelGuasap9809/computing-assessment" target = "_blank">GitHub</a></p>
+    <p>|</p>
+    <p>Toggle dark mode: <input type = "checkbox" id = "darkMode"></p>
+  </footer>
+  <script src = "./assets/script.js"></script>
+  <script>
+    function captiveSubmit(event) {
+      event.preventDefault();
+
+      // Get the selected value for "type"
+      let typeRadios = document.getElementsByName("type");
+      let typeValue = null;
+      for (let radio of typeRadios) {
+        if (radio.checked) {
+          typeValue = parseInt(radio.value);
+          break;
+        }
+      }
+
+      // Get the selected value for "freq"
+      let freqRadios = document.getElementsByName("freq");
+      let freqValue = null;
+      for (let radio of freqRadios) {
+        if (radio.checked) {
+          freqValue = parseInt(radio.value);
+          break;
+        }
+      }
+
+      // Check if both values are selected
+      if (typeValue !== null && freqValue !== null) {
+        let score = typeValue + freqValue;
+        document.getElementById("scoreH2").textContent = "Your backup score is " + score + "/6";
+      } else {
+        document.getElementById("scoreH2").textContent = "Please select both a backup type and frequency.";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
