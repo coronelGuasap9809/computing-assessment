@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--aspects page, which contains statistics, for preventing unwanted connections-->
 <html>
 <head>
   <link href = "./assets/main.css" rel = "stylesheet">
@@ -9,15 +9,15 @@
   <title>Securi-smart | Unwanted Connections</title>
 </head>
 <body>
-  <div class = "titleBar">
+  <div class = "titleBar"><!--bar at the top of the page that contains the h1 header and navigation buttons-->
     <h1>Securi-smart Aspect &mdash; <em>Connections</em></h1>
     <div class = "btnContainer">
       <a class = "button navigatorBtn" href = "index.html">Home</a>
       <a class = "button navigatorBtn" href = "aspects.html">Aspects</a>
     </div>
   </div> 
-  <div class = "contentGrid">
-    <div class = "divHeader">
+  <div class = "contentGrid"><!--a container that displays items in a grid-->
+    <div class = "divHeader"><!--a container intended to be the header of grid containers and content containers-->
       <h3>The Stats</h3>
     </div>
     <div class = "statisticDiv">
@@ -69,24 +69,24 @@
   </div>
   <br>
   <br>
-  <footer>
+  <footer><!--footer which contains link to my GitHub and the toggle for dark mode-->
     <p>This site is on <a href = "https://github.com/coronelGuasap9809/computing-assessment" target = "_blank">GitHub</a></p>
     <p>|</p>
     <p>Toggle dark mode: <input type = "checkbox" id = "darkMode"></p>
   </footer>
   <script src = "./assets/script.js"></script>
   <script>
-    function captiveSubmit(){
-      event.preventDefault();
+    function captiveSubmit(){ //a function that runs when the fake captive portal is submitted
+      event.preventDefault(); //prevents submit button from refreshing the page
       if (document.getElementById("emailInput").value == "gonk@gmail.com" && document.getElementById("passwordInput").value == "gonk1234") {
         location.href = "placeholder.html";
       } else {
-        alert("WARNING: Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.")
-        formResponse.textContent = "Never fill these, or any similar portals out with any kind of personal info unless you are sure of the 2nd party's legitimacy.";
+        alert("WARNING: Never fill these, or any similar portals out with any kind of personal info unless you are sure of their legitimacy.") //makes the browser show an alert
+        formResponse.textContent = "Never fill these, or any similar portals out with any kind of personal info unless you are sure of their legitimacy."; //changes text of caption underneath the captive portal
       }
     }
     
-    function showPassword() {
+    function showPassword() { //function that shows password in password field
       if (document.getElementById("passwordInput").type === "password") {
         document.getElementById("passwordInput").type = "text";
       } else {

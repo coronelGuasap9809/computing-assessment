@@ -308,6 +308,10 @@ input[type = "text"]{
 input[type = "submit"], 
 input[type = "reset"]{
   font-size: 0.8rem;
+  background-color: #50c878;
+  border-color: #40b767;
+  border-radius: 3px;
+  color: white;
 }
 
 input::placeholder{

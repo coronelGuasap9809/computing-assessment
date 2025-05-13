@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--aspects page, which contains statistics, for backups-->
 <html>
 <head>
   <link href = "./assets/main.css" rel = "stylesheet">
@@ -10,15 +10,15 @@
   <title>Securi-smart | Backups</title>
 </head>
 <body>
-  <div class = "titleBar">
+  <div class = "titleBar"><!--bar at the top of the page that contains the h1 header and navigation buttons-->
     <h1>Securi-smart Aspect &mdash; <em>Backups</em></h1>
     <div class = "btnContainer">
       <a class = "button navigatorBtn" href = "index.html">Home</a>
       <a class = "button navigatorBtn" href = "aspects.html">Aspects</a>
     </div>
   </div> 
-  <div class = "contentGrid">
-    <div class = "divHeader">
+  <div class = "contentGrid"><!--a container that displays items in a grid-->
+    <div class = "divHeader"><!--a container intended to be the header of grid containers and content containers-->
       <h3>The Stats</h3>
     </div>
     <div class = "statisticDiv">
@@ -30,15 +30,15 @@
       <div class = captivePortal>
         <h5>Backup Settings: How good is your backup?</h5>
           <form onsubmit = "captiveSubmit(event);">
-            <h5>Type:</h5>
-            <input type = "radio" name = "type" id = "partial" value = "1">
+            <h5>Type:</h5><!--header for interactive element thingy-->
+            <input type = "radio" name = "type" id = "partial" value = "1"> <!--a set of radio buttons which the user uses to select the type of backup they do-->
               <label for = "partial">Partial</label><br>
             <input type = "radio" name = "type" id = "differential" value = "2">
               <label for = "differential">Differential</label><br>
             <input type = "radio" name = "type" id = "full" value = "3">
               <label for = "full">Full</label><br>
             <h5>Frequency:</h5>
-            <input type = "radio" name = "freq" id = "monthly" value = "1">
+            <input type = "radio" name = "freq" id = "monthly" value = "1"> <!--a set of radio buttons which the user uses to select the frequncy they make backups-->
               <label for = "monthly">Monthly</label><br>
             <input type = "radio" name = "freq" id = "weekly" value = "2">
               <label for = "weekly">Weekly</label><br>
@@ -47,30 +47,30 @@
             <input type = "radio" name = "freq" id = "manual" value = "0">
               <label for = "manual">Manual</label><br>
             <br>
-            <input type = "submit">
-            <input type = "reset">
+            <input type = "submit"><!--Button to submit form-->
+            <input type = "reset"><!--Button to reset form-->
           </form>
       </div>
       <h2 id = "scoreH2">Check the efficacy of your backup settings.</h2>
     </div>
-    <div class = "statisticDiv">
+    <div class = "statisticDiv"><!--container for a statistic and its caption-->
       <h3>15 MILLION</h3>
       <h2>The cost in dollars that data losses at large scales can reach<h2>
     </div>
-    <div class = "statisticDiv">
+    <div class = "statisticDiv"><!--container for a statistic and its caption-->
       <h3>35%</h3>
       <h2>The percentage of companies that lost data they could never recover</h2>
     </div>
     <img class = "gridImg" src = "./assets/images/hardDrive.webp" alt ="a group of businesmen looking anxiously at a computer"><!--./images/boardroom.jpeg-->
-    <div class = "statisticDivWide">
+    <div class = "statisticDivWide"><!--wide container for a statistic and its caption-->
       <h3>More than HALF</h3>
       <h2>The the proportion of the world's business data that is stored on the cloud</h2>
     </div>
-    <div class = "statisticDiv">
+    <div class = "statisticDiv"><!--container for a statistic and its caption-->
       <h3>93%</h3>
       <h2 >The percentage of companies that file for banckrupcy within a year of losing data for more than 10 days</h2>
     </div>
-    <div class = "statisticDiv">
+    <div class = "statisticDiv"><!--container for a statistic and its caption-->
       <h3>95%</h3>
       <h2>The increase in attacks on cloud data in 2022</h2>
     </div>
@@ -78,7 +78,7 @@
   </div>
   <br>
   <br>
-  <footer>
+  <footer><!--footer which contains link to my GitHub and the toggle for dark mode-->
     <p>This site is on <a href = "https://github.com/coronelGuasap9809/computing-assessment" target = "_blank">GitHub</a></p>
     <p>|</p>
     <p>Toggle dark mode: <input type = "checkbox" id = "darkMode"></p>
@@ -90,29 +90,29 @@
 
       // Get the selected value for "type"
       let typeRadios = document.getElementsByName("type");
-      let typeValue = null;
-      for (let radio of typeRadios) {
-        if (radio.checked) {
-          typeValue = parseInt(radio.value);
+      let typeValue = null; //creates an empty variable for the value of the type radios
+      for (let radio of typeRadios) { //repeats for each radio button
+        if (radio.checked) { //checks if the radio button is checked
+          typeValue = parseInt(radio.value); //gets the value of the checked radio button and sets the empty variable to that
           break;
         }
       }
 
       // Get the selected value for "freq"
       let freqRadios = document.getElementsByName("freq");
-      let freqValue = null;
-      for (let radio of freqRadios) {
-        if (radio.checked) {
-          freqValue = parseInt(radio.value);
+      let freqValue = null; //creates an empty variable for the value of the frequency radios
+      for (let radio of freqRadios) { //repeats for each radio button
+        if (radio.checked) { //checks if the radio button is checked
+          freqValue = parseInt(radio.value); //gets the value of the checked radio button and sets the empty variable to that
           break;
         }
       }
 
-      // Check if both values are selected
+      // Checks if at least the type is selected
       if (typeValue !== null) {
-        let score = typeValue + freqValue;
-        document.getElementById("scoreH2").textContent = "Your backup score is " + score + "/6 \u2014 ";
-        if(score == 1){
+        let score = typeValue + freqValue; //sets a variable for the backup score by adding the two previous variables
+        document.getElementById("scoreH2").textContent = "Your backup score is " + score + "/6 \u2014 "; //changes text content of the caption of the interactive element to the score
+        if(score == 1){ //adds a message depending on the score
           document.getElementById("scoreH2").textContent += "Mediocre. Your files are not well backed-up."
         }else if (score == 2) {
           document.getElementById("scoreH2").textContent += "Not great. Some of your most recent or important files may be left out!"
@@ -121,7 +121,7 @@
         } else {
           document.getElementById("scoreH2").textContent += "Awesome! You have great disaster recovery! Why not try encrypting your backups?"
         }
-      } else {
+      } else { //if you submit the interactive element with nothing submitted, it gives you a message asking if you don't have backups
         document.getElementById("scoreH2").textContent = "You don't have backups? If you want to protect your data, consider it!";
       }
     }
