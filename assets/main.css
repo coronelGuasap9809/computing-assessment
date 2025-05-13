@@ -33,6 +33,7 @@
 .aspectsBtn:hover{
   transform: scale(102%);
 }
+/*styles for aspects buttons within grids*/
 .contentGrid > .aspectsBtn{
   display: inline;
   grid-column-start: 1;
@@ -116,6 +117,7 @@
   grid-column-start: 1; 
   grid-column-end: 3;
 }
+/*class for an unordered list that goes in aspect pages and is large compared to index.html unordered list*/
 .largeList{
   font-size: 1.5rem;
   margin: 8px;
@@ -163,6 +165,7 @@
 .GO:hover{
   transform: scale(105%);
 }
+/*green label that says "complete" and appears next to the green check when you complete an aspect*/
 .check-icon-label{
   font-weight: bold;
   background-color: #50C878;
@@ -228,6 +231,7 @@
 .dark .icon:not(.no-invert) {
   filter: invert(1) brightness(2);
 }
+/*screenshot border color in dark mode*/
 .dark .screenshot{
   border-color: white;
 }
@@ -339,7 +343,7 @@ transform-origin: left bottom;
   width: 0;
 }
 
-/*responsive layout breakpoints and modifications*/
+/*responsive layout breakpoints and modifications. Should be self-explanatory if you know CSS and what the class does (in comments around the document)*/
 @media screen and (max-width: 1300px){
   html{
     font-size: 18px;

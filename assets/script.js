@@ -23,7 +23,7 @@ window.onload = () => {
 const darkMode = document.getElementById("darkMode");
 darkMode.onclick = darkModeFunc;
 
-//unrelated
+//unrelated test
 (function () {
     let intervalId = null;
     function toggleHeadacheMode() {
@@ -73,28 +73,25 @@ function markAspectComplete(aspectName) {
 
 // Function to update the aspects page with completion icons
 function updateAspectsPage() {
-    const completedAspects = JSON.parse(localStorage.getItem("completedAspects")) || [];
+    const completedAspects = JSON.parse(localStorage.getItem("completedAspects")) || []; //gets a JSON list of completed aspects from local storage (if they exist)
 
-    completedAspects.forEach(aspectName => {
-        // Select the icon container by its ID
-        const iconContainer = document.getElementById(`${aspectName}IconContainer`);
-        if (iconContainer) {
-            // Check if the icon already exists to avoid duplicates
-            if (!iconContainer.querySelector(`img[alt="${aspectName} complete"]`)) {
-                // Create the check icon
+    completedAspects.forEach(aspectName => { 
+        const iconContainer = document.getElementById(`${aspectName}IconContainer`); // Select the icon container by its ID
+        if (iconContainer) { // Check if the icon already exists to avoid duplicates
+            if (!iconContainer.querySelector(`img[alt="${aspectName} complete"]`)) { // Create the check icon
                 const checkIcon = document.createElement("img");
                 checkIcon.src = "./assets/images/icons/aspectCompleteIcon.png";
                 checkIcon.alt = `${aspectName} complete`;
-                checkIcon.classList.add("icon", "no-invert"); // Add the no-invert class
+                checkIcon.classList.add("icon", "no-invert"); // Add the icon and no-invert class to the check icons, which shouldn't invert colours in dark mode unlike the other black icons
 
                 // Create the label for the check icon
                 const checkIconLabel = document.createElement("label");
                 checkIconLabel.textContent = "COMPLETE"; // Set the label text
-                checkIconLabel.classList.add("check-icon-label"); // Optional: Add a class for styling
+                checkIconLabel.classList.add("check-icon-label"); //Add a class for styling
 
                 // Insert the icon and label into the container
-                iconContainer.insertBefore(checkIcon, iconContainer.firstChild); // Add the icon first
-                iconContainer.insertBefore(checkIconLabel, checkIcon.nextSibling); // Add the label after the icon
+                iconContainer.insertBefore(checkIcon, iconContainer.firstChild); // Add the icon first (before the icon container's first child)
+                iconContainer.insertBefore(checkIconLabel, checkIcon.nextSibling); // Add the label after the icon (before the next sibling)
             }
         }
     });
