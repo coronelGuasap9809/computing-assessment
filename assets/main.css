@@ -16,7 +16,7 @@
 /*container for navigator buttons (below)*/
 .btnContainer{
   margin: 0;
-  padding: 5px;
+  padding: 6px;
 }
 /*Style and hover pseudoclass for navigator buttons in header bar*/
 .navigatorBtn{
@@ -28,20 +28,16 @@
 /*Style and hover pseudoclass for wide button that leads to aspects page*/
 .aspectsBtn{
   margin: 10px 100px;
+  text-align: center;
 }
 .aspectsBtn:hover{
   transform: scale(102%);
 }
-/*disabled button*/
-.disabledBtn{
-  background-color: #485459; 
-  border-color: #374348
+.contentGrid > .aspectsBtn{
+  display: inline;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
-/*prevents disabled button from enlarging when hovered over*/
-.disabledBtn:hover{
-  transform: scale(100%);
-}
-
 
 /*CLASSES FOR GENERAL ELEMENTS*/
 /*generic, styled container for text etc.*/
@@ -57,16 +53,32 @@
 .divHeader{
   display: flex;
   padding: 5px;
-  border-radius:10px;
+  border-radius: 5px;
   justify-content: space-between;
   align-items: center;
   margin-top: 0;
-  background-color: #ffffff;
+  background-color: white;
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: left;
 }
-
+/*styles for links that look like buttons (sneaky, I know) and for when aria-disabled = true*/
+.button{
+  display: inline-block;
+  border-radius: 7px;
+  border-style: solid;
+  border-color: #40B767;
+  background-color: #50C878;
+  color: white;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.button[aria-disabled = "true"]{
+  background-color: #485459; 
+  border-color: #374348;
+  transform: scale(100%);
+}
 
 /*CLASSES FOR GRID AND RELATED ELEMENTS*/
 /*container for grid*/
@@ -91,7 +103,7 @@
   border-radius:10px;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: white;
 }
 /*wider div (takes up 2 columns) formatted for the grid. dedicated class for responsive layout*/
 .statisticDivWide{
@@ -100,7 +112,7 @@
   border-radius:10px;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: white;
   grid-column-start: 1; 
   grid-column-end: 3;
 }
@@ -109,10 +121,10 @@
 /*CLASSES FOR ASPECTS PAGE AND RELATED ELEMENTS*/
 /*small container for icons*/
 .iconContainer{
-  margin: 0;
+  margin: 0 1px 0 0;
   padding: 5px;
   display: flex;
-  border-radius: 10px;
+  border-radius: 4px;
   justify-content: center;
 }
 /*standard icon. 1.5rem = 24px = standard resolution of the MD3 icons used*/
@@ -131,8 +143,8 @@
 /*responsive container for holding GO button (below)*/
 .goContainer{
   display: flex; 
-  background-color: white; 
-  border-radius: 10px; 
+  border-radius: 5px; 
+  background-color: white;
   padding: 5px 20px; 
   align-self: normal; 
 }
@@ -148,17 +160,26 @@
 .GO:hover{
   transform: scale(105%);
 }
+.check-icon-label{
+  font-weight: bold;
+  background-color: #50C878;
+  color: white;
+  padding: 5px 3px 0 3px;
+  border-radius: 3px;
+  font-size: 0.8rem; 
+  margin-left: 0;
+}
 
 
 /*CLASSES FOR INTERACTIVE ELEMENTS*/
 /*Style and focus-within pseudoclass for the fake captive portal in connections.html*/
 .captivePortal{
-  background-color: lightyellow;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   box-shadow:0px 5px 5px rgba(20, 20, 20, 0.5);
   transition: 0.5s;
+  color: black;
 }
 .captivePortal:focus-within{
   transform: scale(102%);
@@ -166,19 +187,49 @@
 }
 /*style and hover pseudoclass for the screenshot of an email in phishing.html*/
 .screenshot{
-  width: 300px;
+  width: 19rem;
   border-style: double;
   border-color: black;
   border-width: 5px;
-  margin: 20px;
+  margin: 20px auto;
   transition: 0.5s;
 }
 .screenshot:hover{
-  width: 450px;
+  width: 28rem;
   transition: 1s;
 }
 
-/*ELEMENTS*/
+/*CLASSES FOR DARKMODE*/
+/*Darkmode base colour*/
+.dark,
+.dark .divHeader,
+.dark .statisticDiv,
+.dark .statisticDivWide,
+.dark .goContainer{
+  background-color: #0e1116;
+  color: white;
+}
+/*Darkmode accent colour*/
+.dark .aspectsCard,
+.dark p,
+.dark div{
+  background-color: #272c35;
+  color: white;
+}
+/* Footer-specific styles */
+.dark footer > p{
+  color: rgba(255, 255, 255, 0.5);
+  background: none;
+}
+/* Icon style in dark mode */
+.dark .icon:not(.no-invert) {
+  filter: invert(1) brightness(2);
+}
+.dark .screenshot{
+  border-color: white;
+}
+
+/*DEFAULT TAG STYLES*/
 
 body{
   font-family: "Inter", sans-serif;
@@ -214,20 +265,15 @@ h3{
 
 h5{
  margin: 10px;
- font-size: 0.6rem;
+ font-size: 0.8rem;
 }
 
 a{
   color: #45ad68;
 }
 
-button{
-  border-radius: 7px;
-  border-color: #40B767;
-  background-color: #50C878;
-  color: white;
-  font-size: 1.3rem;
-  transition: 0.3s;
+a:not(.button):hover{
+  filter:brightness(1.5);
 }
 
 ol{
@@ -240,6 +286,48 @@ ul{
   text-align: left;
 }
 
+label{
+  font-size: 0.8rem;
+}
+
+input[type = "password"], 
+input[type = "email"], 
+input[type = "text"]{
+  height: 1rem;
+  width: 15rem;
+  font-size: 0.8rem;
+}
+
+input[type = "submit"], 
+input[type = "reset"]{
+  font-size: 0.8rem;
+}
+
+input::placeholder{
+  font-size: 0.8rem;
+}
+
+input[type = "checkbox"],
+input[type = "radio"]{
+  accent-color: #50C878;
+  width: 1rem;
+  height: 1rem;
+}
+
+footer{
+font-size: 0.6rem;
+color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: space-between;
+position: fixed;
+bottom: 0;
+left: 0;
+border-radius: 5px 5px 5px 0;
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+transform: scale(80%);
+transform-origin: left bottom;
+}
 
 /*RESPONSIVE LAYOUT*/
 
@@ -281,11 +369,23 @@ ul{
 
   .divHeader{
     grid-column-end: 2;
+  }    
+  
+  .screenshot{
+    width: 21rem;
+  }
+  
+  .screenshot:hover{
+    width: 21rem;
   }
 
   @media screen and (max-width: 1000px){
     html{
       font-size: 37.5px;
+    }
+
+    input[type = "password"], input[type = "email"]{
+      border-radius: 5px;
     }
 
     .aspectsCard{   
@@ -333,6 +433,22 @@ ul{
       grid-column-end: 2;
     }
 
+    .screenshot:hover{
+      width: 19rem;
+    }
+
+    .btnContainer{
+      padding: 15px;
+    }
+
+    .contentGrid > .aspectsBtn{
+      grid-column-end: 2;
+    }
+
+    .check-icon-label{
+      padding: 11px 3px 0 3px;
+    }
+    
   }
 
 }

@@ -12,11 +12,10 @@
   <div class = "titleBar">
     <h1>Securi-smart Aspect &mdash; <em>Phishing</em></h1>
     <div class = "btnContainer">
-      <button id = "homeBtn" class = "navigatorBtn">Home</button>
-      <button id = "aspectsBtnNav" class = "navigatorBtn">Aspects</button>
+      <a class = "button navigatorBtn" href = "index.html">Home</a>
+      <a class = "button navigatorBtn" href = "aspects.html">Aspects</a>
     </div>
   </div> 
-  <!--https://www.getastra.com/blog/security-audit/password-statistics/-->
   <div class = "contentGrid">
     <div class = "divHeader">
       <h3>The Stats</h3>
@@ -28,40 +27,38 @@
     <img class = "gridImg" src = "./assets/images/fishing.jpg" alt ="An elderly woman in front of a computer, looking stressed."><!--./images/stressed.jpeg-->
     <div class = "statisticDiv" style = "flex-direction: column;">
       <img class = "screenshot" src = "./assets/images/scram.png" alt = "A screenshot of an email">
-      <h2 >A real phishing email. Note the generic greeting and unusual formatting and language (Hover to enlarge)</h2>
+      <h2 >A real phishing email. Note the generic greeting and unusual formatting and language. Hover to enlarge (desktop only)</h2>
     </div>
     <div class = "statisticDiv">
       <h3>$17,700</h3>
       <h2>The estimated losses <em>per minute</em> to phishing</h2>
     </div>
     <div class = "statisticDiv">
-      <h3>81%</h3>
-      <h2 >The percentage of enterprise data breaches that are due to weak passwords</h2>
+      <h3>35%</h3>
+      <h2 >The proportion of ransomware attacks that begin with a phishing email</h2>
     </div>
-    <img class = "gridImg" src = "./assets/images/boardroom.jpeg" alt ="a group of businesmen looking anxiously at a computer"><!--./images/boardroom.jpeg-->
+    <img class = "gridImg" src = "./assets/images/phishingGraphic.webp" alt ="a group of businesmen looking anxiously at a computer"><!--./images/boardroom.jpeg-->
     <div class = "statisticDivWide">
-      <h3>About 1 in 5</h3>
-      <h2>The rate at which hackers <em>guess</em> weak passwords correctly</h2>
+      <h3>Over HALF</h3>
+      <h2>The proportion of phishing attacks disguised as either Google, Microsoft or Amazon</h2>
     </div>
     <div class = "statisticDiv">
       <h3>36%</h3>
       <h2>The percentage of phishing attacks that use deceptive links to fool the victim</h2>
     </div>
     <div class = "statisticDiv">
-      <h3>76%</h3>
-      <h2>The estimated percentage of targeted attacks that could be avoided by simply using multi-factor authentication.</h2>
+      <h3>3.4 BILLION</h3>
+      <h2>The number of phishing emails sent <em>daily</em></h2>
     </div>
+    <a id = "phishingComplete" class = "button aspectsBtn" href = "aspects.html">Complete this Aspect</a>
   </div>
+  <br>
+  <br>
+  <footer>
+    <p>This site is on <a href = "https://github.com/coronelGuasap9809/computing-assessment" target = "_blank">GitHub</a></p>
+    <p>|</p>
+    <p>Toggle dark mode: <input type = "checkbox" id = "darkMode"></p>
+  </footer>
+  <script src = "./assets/script.js"></script>
 </body>
-  <script>
-    function gotoHome(){
-      location.href = "index.html";
-    }
-    function gotoAspects(){
-      location.href = "aspects.html";
-      
-    }
-    homeBtn.onclick = gotoHome;
-    aspectsBtnNav.onclick = gotoAspects;
-  </script>
 </html>
