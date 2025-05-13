@@ -39,11 +39,13 @@
               <label for = "full">Full</label><br>
             <h5>Frequency:</h5>
             <input type = "radio" name = "freq" id = "monthly" value = "1">
-              <label for = "partial">Monthly</label><br>
+              <label for = "monthly">Monthly</label><br>
             <input type = "radio" name = "freq" id = "weekly" value = "2">
-              <label for = "differential">Weekly</label><br>
+              <label for = "weekly">Weekly</label><br>
             <input type = "radio" name = "freq" id = "daily" value = "3">
-              <label for = "full">Daily</label><br>
+              <label for = "daily">Daily</label><br>
+            <input type = "radio" name = "freq" id = "manual" value = "0">
+              <label for = "manual">Manual</label><br>
             <br>
             <input type = "submit">
             <input type = "reset">
@@ -52,25 +54,25 @@
       <h2 id = "scoreH2">Check the efficacy of your backup settings.</h2>
     </div>
     <div class = "statisticDiv">
-      <h3>555 MILLION</h3>
-      <h2>The amount of passwords stolen and published on the dark web in the span of 3 years<h2>
+      <h3>15 MILLION</h3>
+      <h2>The cost in dollars that data losses at large scales can reach<h2>
     </div>
     <div class = "statisticDiv">
-      <h3>81%</h3>
-      <h2>The percentage of enterprise data breaches that are due to weak passwords</h2>
+      <h3>35%</h3>
+      <h2>The percentage of companies that lost data they could never recover</h2>
     </div>
-    <img class = "gridImg" src = "./assets/images/boardroom.jpeg" alt ="a group of businesmen looking anxiously at a computer"><!--./images/boardroom.jpeg-->
+    <img class = "gridImg" src = "./assets/images/hardDrive.webp" alt ="a group of businesmen looking anxiously at a computer"><!--./images/boardroom.jpeg-->
     <div class = "statisticDivWide">
-      <h3>About 1 in 5</h3>
-      <h2>The rate at which hackers <em>guess</em> weak passwords correctly</h2>
+      <h3>More than HALF</h3>
+      <h2>The the proportion of the world's business data that is stored on the cloud</h2>
     </div>
     <div class = "statisticDiv">
       <h3>93%</h3>
       <h2 >The percentage of companies that file for banckrupcy within a year of losing data for more than 10 days</h2>
     </div>
     <div class = "statisticDiv">
-      <h3>76%</h3>
-      <h2>The estimated percentage of targeted attacks that could be avoided by simply using multi-factor authentication.</h2>
+      <h3>95%</h3>
+      <h2>The increase in attacks on cloud data in 2022</h2>
     </div>
     <a id = "backupsComplete" class = "button aspectsBtn" href = "aspects.html">Complete this Aspect</a>
   </div>
@@ -107,11 +109,20 @@
       }
 
       // Check if both values are selected
-      if (typeValue !== null && freqValue !== null) {
+      if (typeValue !== null) {
         let score = typeValue + freqValue;
-        document.getElementById("scoreH2").textContent = "Your backup score is " + score + "/6";
+        document.getElementById("scoreH2").textContent = "Your backup score is " + score + "/6 \u2014 ";
+        if(score == 1){
+          document.getElementById("scoreH2").textContent += "Mediocre. Your files are not well backed-up."
+        }else if (score == 2) {
+          document.getElementById("scoreH2").textContent += "Not great. Some of your most recent or important files may be left out!"
+        } else if(score == 3 || score == 4) {
+          document.getElementById("scoreH2").textContent += "Good. However, you are still not getting the best disaster recovery."
+        } else {
+          document.getElementById("scoreH2").textContent += "Awesome! You have great disaster recovery! Why not try encrypting your backups?"
+        }
       } else {
-        document.getElementById("scoreH2").textContent = "Please select both a backup type and frequency.";
+        document.getElementById("scoreH2").textContent = "You don't have backups? If you want to protect your data, consider it!";
       }
     }
   </script>

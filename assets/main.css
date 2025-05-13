@@ -272,6 +272,10 @@ a{
   color: #45ad68;
 }
 
+a:not(.button):hover{
+  filter:brightness(1.5);
+}
+
 ol{
   font-size: 1.5rem;
   margin: 8px;
