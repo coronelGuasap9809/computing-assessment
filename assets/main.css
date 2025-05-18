@@ -93,8 +93,6 @@
 /*image formatted to fit in grid*/
 .gridImg{
   width: 100%;
-  height: 100%;
-  width: 1fr;
   border-radius: 10px;
 }
 /*div formatted to fit in grid*/
