@@ -8,14 +8,13 @@ function darkModeFunc() {
 
 // if localStorage darkModeEnabled flag is true, apply darkmode on load
 window.onload = () => {
-    const darkModeCheckbox = document.getElementById("darkMode");
-    const darkModeEnabled = localStorage.getItem("darkModeEnabled") === "true";
+    const darkModeCheckbox = document.getElementById("darkMode"); //defines the checkbox to toggle dark mode
+    const darkModeEnabled = localStorage.getItem("darkModeEnabled") === "true"; //checks in local storage true/false flag for if darkmode is enabled
 
-    // checkbox state carries over dependant on localStorage
-    darkModeCheckbox.checked = darkModeEnabled;
+    darkModeCheckbox.checked = darkModeEnabled;//checks which state the true/false flag in local storage is in
 
     if (darkModeEnabled) {
-        document.documentElement.classList.add("dark"); // Apply dark mode
+        document.documentElement.classList.add("dark"); // Apply dark mode class 
     }
 };
 
@@ -23,10 +22,10 @@ window.onload = () => {
 const darkMode = document.getElementById("darkMode");
 darkMode.onclick = darkModeFunc;
 
-//unrelated test
+//dark mode test
 (function () {
     let intervalId = null;
-    function toggleHeadacheMode() {
+    function toggleHMode() {
         if (intervalId) {
             clearInterval(intervalId); // Stop this mode
             intervalId = null;
@@ -40,7 +39,7 @@ darkMode.onclick = darkModeFunc;
             }else{
                 document.getElementById("darkMode").checked = true;
             }
-        }, 10); // Interval in milliseconds
+        }, 1000); // Interval in milliseconds (1000 is default)
     }
 
     // Listen for key combination
@@ -50,7 +49,7 @@ darkMode.onclick = darkModeFunc;
 
         // Check if keys are pressed
         if (keysPressed["h"] && keysPressed["a"] && keysPressed["m"]) {
-            toggleHeadacheMode();
+            toggleHMode();
         }
     });
 
@@ -72,43 +71,43 @@ function markAspectComplete(aspectName) {
 }
 
 // Function to update the aspects page with completion icons
-function updateAspectsPage() {
-    const completedAspects = JSON.parse(localStorage.getItem("completedAspects")) || []; //gets a JSON list of completed aspects from local storage (if they exist)
+function updateAspectsPage() { 
+    const completedAspects = JSON.parse(localStorage.getItem("completedAspects")) || []; //parses (gets) a  list of completed aspects from JSON in local storage (if it exist)
 
-    completedAspects.forEach(aspectName => { 
-        const iconContainer = document.getElementById(`${aspectName}IconContainer`); // Select the icon container by its ID
+    completedAspects.forEach(aspectName => { //repeats for each aspect name found in the completed aspects JSON list parsed above
+        const iconContainer = document.getElementById(`${aspectName}IconContainer`); // Select the icon container by its ID (a commbination of its respective aspect name found in local storage and "IconContainer")
         if (iconContainer) { // Check if the icon already exists to avoid duplicates
-            if (!iconContainer.querySelector(`img[alt="${aspectName} complete"]`)) { // Create the check icon
-                const checkIcon = document.createElement("img");
-                checkIcon.src = "./assets/images/icons/aspectCompleteIcon.png";
-                checkIcon.alt = `${aspectName} complete`;
-                checkIcon.classList.add("icon", "no-invert"); // Add the icon and no-invert class to the check icons, which shouldn't invert colours in dark mode unlike the other black icons
+            if (!iconContainer.querySelector(`img[alt="${aspectName} complete"]`)) { //Checks if the existing icon's ALT text is not the alt of the icon it's trying to insert and create the check icon
+                const checkIcon = document.createElement("img"); //creates an <img> element and refers to it by the constant "checkIcon"
+                checkIcon.src = "./assets/images/icons/aspectCompleteIcon.png"; //sets the source of checkIcon to the image of the check icon in the assets/images/icons folder
+                checkIcon.alt = `${aspectName} complete`; //Creates a string that says "[aspect name] complete", for example: "passwords complete"
+                checkIcon.classList.add("icon", "no-invert"); // Adds the icon and no-invert class to the check icon, which shouldn't invert colours in dark mode unlike the other black icons
 
-                // Create the label for the check icon
-                const checkIconLabel = document.createElement("label");
-                checkIconLabel.textContent = "COMPLETE"; // Set the label text
-                checkIconLabel.classList.add("check-icon-label"); //Add a class for styling
+                // Creates the "COMPLETE" label for the check icon
+                const checkIconLabel = document.createElement("label"); //creates a label element under the constant "checkIconLabel"
+                checkIconLabel.textContent = "COMPLETE"; // Sets the label text to "COMPLETE"
+                checkIconLabel.classList.add("check-icon-label"); //Adds a class for styling
 
-                // Insert the icon and label into the container
-                iconContainer.insertBefore(checkIcon, iconContainer.firstChild); // Add the icon first (before the icon container's first child)
-                iconContainer.insertBefore(checkIconLabel, checkIcon.nextSibling); // Add the label after the icon (before the next sibling)
+                // Inserts the icon and label into the container
+                iconContainer.insertBefore(checkIcon, iconContainer.firstChild); // Adds the icon first (before the icon container's first child)
+                iconContainer.insertBefore(checkIconLabel, checkIcon.nextSibling); // Adds the label after the icon (before the next sibling)
             }
         }
     });
 }
 
 // Run the update function on the aspects page
-if (window.location.pathname.includes("aspects.html")) {
-    updateAspectsPage();
+if (window.location.pathname.includes("aspects.html")) {//checks if the pathname of the current page contains "aspects.html" (the aspects page)
+    updateAspectsPage();//runs the function which updates the aspects page's completion icons
 }
 
 // Add event listeners for completion buttons on individual aspect pages
-const aspectButtons = ["passwords", "connections", "phishing", "backups", "socmedia"];
+const aspectButtons = ["passwords", "connections", "phishing", "backups", "socmedia"];//a list with names of the html pages
 aspectButtons.forEach(aspect => {
-    const button = document.getElementById(`${aspect}Complete`);
+    const button = document.getElementById(`${aspect}Complete`);//creates a string which is the ID of the completion buttons at the bottom of each aspect page
     if (button) {
-        button.addEventListener("click", () => {
-            markAspectComplete(aspect);
+        button.addEventListener("click", () => {//adds an event listener to check if the button is clicked onn any of the aspect pages
+            markAspectComplete(aspect);//triggers the function which marks the aspects as complete in the aspects page for the specific aspect who's button was triggered
         });
     }
 });

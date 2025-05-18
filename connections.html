@@ -26,23 +26,23 @@
     </div>
     <img class = "gridImg" src = "./assets/images/internetUser.jpeg" alt ="A man using his phone in a cafe"><!--./images/internetUser.jpeg-->
     <div class = "statisticDiv" style = "flex-direction: column;">
-      <div class = "captivePortal">
-        <form onsubmit = "captiveSubmit();">
-          <h5>Welcome to Public_Free_WiFi. Please log in to access.</h5>
+      <div class = "captivePortal"><!--fake captive portal demo-->
+        <form onsubmit = "captiveSubmit();"><!--creates a form which is the captive portal and sets the function it is to trigger on submit-->
+          <h5>Welcome to Public_Free_WiFi. Please log in to access.</h5><!--Captive portal title-->
           <label for = "email">Email</label><br>
-          <input type = "email" name = "email" id = "emailInput" placeholder = "example@gmail.com"><br>
+          <input type = "email" name = "email" id = "emailInput" placeholder = "example@gmail.com"><br><!--creates an email field-->
           <label for = "pass">Password</label><br>
-          <input type = "password" name = "pass" id = "passwordInput" placeholder = "Your password"><br><br>
+          <input type = "password" name = "pass" id = "passwordInput" placeholder = "Your password"><br><br><!--creates a password field-->
           <input type = "checkbox" name = "showPass" onclick = "showPassword()">
           <label for = "showpass">Show Password</label><br><br>
           <br>
           <br>
-          <input type = "submit">
-          <input type = "reset">
+          <input type = "submit"><!--buttonn that submits form-->
+          <input type = "reset"><!--button that resets form-->
         </form> 
       </div>
       <br>
-      <h2 id = "formResponse">An example Evil Twin captive portal. (Interactive)</h2>
+      <h2 id = "formResponse">An example Evil Twin captive portal (fake and interactive but DON'T put your real details here anyway).</h2>
     </div>
     <div class = "statisticDiv">
       <h3>6.06 BILLION</h3>
