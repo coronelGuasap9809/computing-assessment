@@ -1,0 +1,7 @@
+https://securi-smart.vercel.app
+https://securi-smart.vercel.app/aspects.html
+https://securi-smart.vercel.app/passwords.html
+https://securi-smart.vercel.app/connections.html
+https://securi-smart.vercel.app/phishing.html
+https://securi-smart.vercel.app/backups.html
+https://securi-smart.vercel.app/socmedia.html
